@@ -9,7 +9,14 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
-var home = require('./routes/home');
+var item = require('./routes/item');
+var favorites = require('./routes/favorites');
+var settings= require('./routes/settings');
+var top_deals= require('./routes/top-deals');
+var categories = require('./routes/categories');
+var fashion_trends = require('./routes/fashion-trends');
+var worn_by = require('./routes/worn-by');
+var search_results = require('./routes/search-results');
 // Example route
 // var user = require('./routes/user');
 
@@ -36,7 +43,14 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/home', home.view);
+app.get('/item', item.view);
+app.get('/favorites', favorites.view);
+app.get('/settings', settings.view);
+app.get('/top-deals', top_deals.view);
+app.get('/categories', categories.view);
+app.get('/fashion-trends', fashion_trends.view);
+app.get('/worn-by', worn_by.view);
+app.get('/search-results', search_results.view);
 // Example route
 // app.get('/users', user.list);
 
