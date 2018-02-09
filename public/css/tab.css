@@ -1,0 +1,55 @@
+.price {
+	text-align: right
+}
+
+
+.updated {
+	margin-top: 25px;
+	text-align: right;
+	font-size: 65%;
+}
+
+.size {
+	/*margin-left: 130px;*/
+	display: inline;
+}
+
+/*.sizeChart {
+	margin-left: 15px;
+	display: inline;
+}*/
+
+.leftImage {
+	float: left;
+}
+
+.rightImage {
+	width: 10%;
+	display: list-item;
+}
+
+.images {
+	float: left;
+}
+
+.addClass {
+	text-align: bottom;
+}
+
+.img {
+	width: 60%;
+}
+
+.checked {
+    color: orange;
+}
+
+.title {
+	background-color: #85a8d3;
+	color: #FFF;
+	text-align: center;
+}
+
+.arrow {
+	float: left;
+}
