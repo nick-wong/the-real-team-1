@@ -1,77 +1,30 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
-
-  <script
-  src="//code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-  <link rel="stylesheet" type="text/css" href="css/tab.css">
-  <link href="/css/layout.css" rel="stylesheet">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-  <title>ClothesPros</title>
-</head>
-<body>
-
-    <!--Navigation bar-->
-    <div id="nav-placeholder">
-
+<div class = "section-title container">
+  <div class="row arrow">
+    <div class="col-xs-2">
+      <span class="glyphicon glyphicon-chevron-left"></span>
     </div>
 
-    <script>
-        /*
-    $(function(){
-      $("#nav-placeholder").load("/views/nav.html");
-    });*/
-        $.get('nav.html').done(function(data) {
-            $("#nav-placeholder").html(data)
-        });
-    </script>
-    <!--end of Navigation bar-->
 
+    <div class="col-xs-8">
+      <h4 class = "levi"> Levi's Jeans </h4>
+    </div>
 
-<!-- New code -->
-
-<div class = "title">
-  <div class="row">
-  <div class="col-xs-2">
-    <h2> <a href="/" style="color:white"> < </a></h2>
   </div>
-
-
-  <div class="col-xs-8">
-    <h3 class = "levi"> Levi's Jeans </h3>
-  </div>
-
-</div>
 </div>
 <div class="container">
   <div class="row">
     <div class="col-xs-6">
       <div class="images">
 
-  <p> <a href="index.handlebars"> Bottoms </a> > <a href="item.handlebars"> Jeans </a> </p>
+  <p> <a href="index"> Bottoms </a> > <a href="item"> Jeans </a> </p>
 
         <div class="leftImage">
           <img src="../img/jeans.JPG" class="img-thumbnail" alt="Levi Jeans" width="150">
         </div>
 
-          <img src="../img/jeans.JPG" class="rightImage img-thumbnail" alt="Levi Jeans" width="150">
-          <img src="../img/jeans.JPG" class="rightImage img-thumbnail" alt="Levi Jeans" width="150">
-          <img src="../img/jeans.JPG" class="rightImage img-thumbnail" alt="Levi Jeans" width="150">
+          <img src="img/jeans.JPG" class="rightImage img-thumbnail" alt="Levi Jeans" width="150">
+          <img src="img/jeans.JPG" class="rightImage img-thumbnail" alt="Levi Jeans" width="150">
+          <img src="img/jeans.JPG" class="rightImage img-thumbnail" alt="Levi Jeans" width="150">
 
       </div>
     </div>
@@ -98,56 +51,56 @@
             <button type="button" class="btn btn-outline-primary">30W</button>
             <button type="button" class="btn btn-outline-primary">32L</button>
       </div>
-          
+
     </div>
   </div>
 </div>
-<div id="exTab2" class="container"> 
+<div id="exTab2" class="container">
 <ul class="nav nav-tabs">
       <li class="active">
         <a  href="#1" data-toggle="tab">Prices</a>
       </li>
-      <li><a href="#2" data-toggle="tab">Product<br>Information</a>
+      <li>
+        <a href="#2" data-toggle="tab">Product Information</a>
       </li>
-      <li><a href="#3" data-toggle="tab">Price<br>History</a>
+      <li>
+        <a href="#3" data-toggle="tab">Price History</a>
       </li>
-      <li><a href="#4" data-toggle="tab">Reviews</a>
+      <li>
+        <a href="#4" data-toggle="tab">Reviews</a>
       </li>
     </ul>
-
-
-
-
 
       <div class="tab-content ">
         <div class="tab-pane active" id="1">
           <div class="storeName">
             <ul class="list-group">
               <li class="list-group-item">
-                        Store #1 <br> 
-
-                                        <div class="price">
-                                          <del>$99.99</del> <b>$29</b>.99   <br>
-                                          $29.99 + $0 s/h <br>
-                                        </div>
-
-
-                                        <div class="updated">
-                                          Updated 42 minutes ago </div></li>                                        
-              <li class="list-group-item">Store #2 <br> 
-                                        <div class="price">
-
-                                          <del>$99.99</del> <b>$54</b>.98   <br>
-                                          $49.99 + $4.99 s/h <br>
-                                        <div class="updated">
-                                          Updated 50 minutes ago</div></li>
-              <li class="list-group-item">Store #3 <br> 
-                                        <div class="price">
-
-                                          <del>$99.99</del> <b>$74</b>.99   <br>
-                                          $74.99 + $0 s/h <br>
-                                        <div class="updated">
-                                          Updated 53 minutes ago</div></li>
+                Store #1 <br>
+                <div class="price">
+                  <del>$99.99</del> <b>$29</b>.99   <br>
+                  $29.99 + $0 s/h <br>
+                </div>
+                <div class="updated">
+                  Updated 42 minutes ago
+                </div>
+              </li>
+              <li class="list-group-item">Store #2 <br>
+                <div class="price">
+                  <del>$99.99</del> <b>$54</b>.98   <br>
+                  $49.99 + $4.99 s/h <br>
+                <div class="updated">
+                  Updated 50 minutes ago
+                </div>
+              </li>
+              <li class="list-group-item">Store #3 <br>
+                <div class="price">
+                  <del>$99.99</del> <b>$74</b>.99   <br>
+                  $74.99 + $0 s/h <br>
+                <div class="updated">
+                  Updated 53 minutes ago
+                </div>
+              </li>
             </ul>
             <!-- <h4>Store #1</h4> -->
           </div>
@@ -163,18 +116,3 @@
         </div>
       </div>
   </div>
-
-  <script src="//code.jquery.com/jquery.js"></script>
-  <script>
-      
-  $(document).on('click',function(e){
-    if(e.target !== $('.form-control')[0]) {
-        $('.navbar-collapse').collapse("hide");  
-    }  
-  });
-  </script>
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</body>
-</html>

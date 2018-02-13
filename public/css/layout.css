@@ -1,3 +1,4 @@
+/* General */
 #logo {
     font-family: Segoe UI, sans-serif;
     font-weight: lighter;
@@ -13,6 +14,19 @@
     font-family: Bahnschrift SemiLight, sans-serif;
 }
 
+.content {
+  margin: 20px 0px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+/* Navigation bar */
+.navbar {
+  margin-bottom: 0;
+}
+
 .navbar-button {
     color: grey;
 }
@@ -24,6 +38,7 @@
 .navbar-brand {
     padding-left: 5px;
     padding-top: 8px;
+    padding-right: 0px;
 }
 
 .navbar-default {
@@ -34,4 +49,90 @@
 
 .form-group {
     margin: 10px;
+}
+
+.submit-btn {
+  background: #7092BE;
+  text-shadow: none;
+  color: white;
+}
+
+/* Carousel */
+#myCarousel {
+  margin-bottom: 40px;
+}
+
+.carousel-indicators li {
+  border: 1px solid gray;
+}
+
+.carousel-indicators .active {
+    background-color: #7092BE;
+}
+
+.carousel-inner .item img {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+
+.carousel-control span.glyphicon {
+  color: black;
+}
+
+.carousel-indicators {
+  bottom: -40px;
+}
+
+/* Text */
+.section-title {
+  text-align: center;
+  background-color: #7092BE;
+  color: white;
+}
+
+.section-title h4 {
+    margin: 15px auto;
+}
+
+.small-text {
+  font-size: .75em;
+}
+
+.item-info {
+  margin: 10px 0px;
+  padding: 0px;
+
+}
+.item-info * {
+  margin: 0;
+}
+
+.stretch-button {
+  display: block;
+  width: 90%;
+  background: #0094ff;
+  border: none;
+}
+
+.left-block {
+  margin-right: 0px;
+}
+
+.right-block {
+  margin-left: 0px;
+}
+
+.checked {
+    color: orange;
+}
+
+/* Etc */
+
+.border {
+  border: 1px solid red;
 }

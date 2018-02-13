@@ -1,3 +1,3 @@
 exports.view = function(req, res){
-  res.render('top-deals');
+  res.render('top-deals', {'layout' : 'defaultLayout'});
 };

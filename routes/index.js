@@ -4,5 +4,8 @@
  */
 
 exports.view = function(req, res){
-  res.render('index');
+  var name = "test";
+
+  console.log(name);
+  res.render('index', {'name': name, 'layout': 'defaultLayout'});
 };

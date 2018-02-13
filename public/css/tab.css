@@ -44,12 +44,30 @@
     color: orange;
 }
 
-.title {
-	background-color: #85a8d3;
-	color: #FFF;
-	text-align: center;
+.arrow {
+  display: flex;
+  align-items: center;
 }
 
-.arrow {
-	float: left;
+.arrow .glyphicon.glyphicon-chevron-left {
+	font-size: .75em;
+}
+
+.nav-tabs {
+    display: flex;
+	  justify-content: center;
+	  align-items: center;
+		border-bottom: none;
+}
+
+.nav-tabs a {
+	font-size: .9em;
+	text-align: center;
+	width: 100%;
+}
+
+.nav-tabs li {
+	height: 50px;
+  display: flex;
+  flex: 1;
 }

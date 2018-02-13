@@ -1,0 +1,102 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
+
+  <script
+  src="//code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <title>ClothesPros</title>
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <link href="/css/layout.css" rel="stylesheet">
+  <link href="/css/tab.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <!-- Dropdown button -->
+      <button type="button" class="navbar-toggle collapsed drop" data-toggle="collapse" data-target="#nav-dropdown-btn" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- User button -->
+      <button type="button" class="navbar-toggle collapsed navbar-button" data-toggle="collapse" data-target="#user-btn" aria-expanded="false">
+          <span class="glyphicon glyphicon-user"></span>
+      </button>
+
+      <!-- Search button -->
+      <button type="button" class="navbar-toggle collapsed navbar-button" data-toggle="collapse" data-target="#search-btn" aria-expanded="false" aria-controls="#user-btn">
+          <span class="glyphicon glyphicon-search"></span>
+      </button>
+
+      <a class="navbar-brand" href="/">
+          <div id="brand">
+              <div id="logo">
+                  CLOTHES<b>PROS</b>
+              </div>
+              <div id="slogan">
+                  find clothes that fit your style and wallet
+              </div>
+          </div>
+      </a>
+    </div>
+
+    <!-- User dropdown -->
+    <div class="collapse navbar-collapse" id="user-btn">
+      <h4 class="navbar-text">Welcome back, {{name}}</h4>
+      <ul class="nav navbar-nav">
+        <li><a href="/favorites"><span class="glyphicon glyphicon-heart"></span> &nbsp; Favorites</a></li>
+        <li><a href="/settings"><span class="glyphicon glyphicon-cog"></span> &nbsp; Settings</a></li>
+      </ul>
+    </div>
+
+    <!-- Search dropdown -->
+    <div class="collapse navbar-collapse" id="search-btn">
+        <div class="form-group input-group">
+          <input type="text" class="form-control" placeholder="Search">
+          <span class="input-group-btn">
+            <a href="/search-results" class="btn btn-default submit-btn">Search</a>
+          </span>
+        </div>
+    </div>
+
+    <!-- Navigation dropdown -->
+    <div class="collapse navbar-collapse" id="nav-dropdown-btn">
+      <ul class="nav navbar-nav">
+        <li><a href="/top-deals"><span class="glyphicon glyphicon-fire"></span> &nbsp; Top Deals</a></li>
+        <li><a href="/categories"><span class="glyphicon glyphicon-th-large"></span> &nbsp; Categories</a></li>
+        <li><a href="/fashion-trends"><span class="glyphicon glyphicon-stats"></span> &nbsp; Fashion Trends</a></li>
+        <li><a href="/worn-by"><span class="glyphicon glyphicon-eye-open"></span> &nbsp; Worn By</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+{{{body}}}
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+  $(document).on('click',function(e){
+    if(e.target !== $('.form-control')[0]) {
+        $('.navbar-collapse').collapse("hide");
+    }
+  });
+  </script>
+</body>
+</html>
