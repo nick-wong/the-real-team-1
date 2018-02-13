@@ -44,6 +44,9 @@
     color: orange;
 }
 
+.back {
+	color: white;
+}
 .arrow {
   display: flex;
   align-items: center;
