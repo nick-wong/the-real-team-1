@@ -17,6 +17,8 @@ var categories = require('./routes/categories');
 var fashion_trends = require('./routes/fashion-trends');
 var worn_by = require('./routes/worn-by');
 var search_results = require('./routes/search-results');
+var login = require('./routes/login');
+var register = require('./routes/register');
 // Example route
 // var user = require('./routes/user');
 
@@ -51,6 +53,8 @@ app.get('/categories', categories.view);
 app.get('/fashion-trends', fashion_trends.view);
 app.get('/worn-by', worn_by.view);
 app.get('/search-results', search_results.view);
+app.get('/login', login.view);
+app.get('/register', register.view)
 // Example route
 // app.get('/users', user.list);
 

@@ -1,0 +1,38 @@
+body {
+  background-color: #7092BE;
+}
+
+#brand {
+  margin: 15px 0px;
+}
+
+#logo {
+    font-family: Segoe UI, sans-serif;
+    font-weight: lighter;
+    font-size: 26px;
+}
+
+#logo b {
+    color: #7092BE;
+}
+
+#slogan {
+    font-size: 12px;
+    font-family: Bahnschrift SemiLight, sans-serif;
+}
+
+.container {
+  border-radius: 5px;
+  margin: 20px;
+  background: white;
+}
+
+.btn {
+  width: 100%;
+  background: #0094ff;
+  border: none;
+}
+
+.green {
+  background: green;
+}

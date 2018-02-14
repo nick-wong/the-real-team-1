@@ -2003,4 +2003,6 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
     })
   })
 
+
+   window.chart = require('chart.js');
 }(jQuery);

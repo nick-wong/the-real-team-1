@@ -1,4 +1,12 @@
 /* General */
+body {
+  padding-top: 50px;
+}
+
+hr {
+  margin: 15px 0px;
+}
+
 #logo {
     font-family: Segoe UI, sans-serif;
     font-weight: lighter;
@@ -20,6 +28,10 @@
 
 .no-padding {
   padding: 0;
+}
+
+.login {
+  background-color: #7092BE;
 }
 
 /* Navigation bar */
@@ -70,11 +82,11 @@
     background-color: #7092BE;
 }
 
-.carousel-inner .item img {
+/*.carousel-inner .item img {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-}
+}*/
 
 .carousel-control.left, .carousel-control.right {
     background-image: none
@@ -88,6 +100,11 @@
   bottom: -40px;
 }
 
+.glyphicon-heart-empty {
+  font-size: 2em;
+  position:absolute;
+  padding: 10px;
+}
 /* Text */
 .section-title {
   text-align: center;
@@ -114,9 +131,11 @@
 
 .stretch-button {
   display: block;
-  width: 90%;
   background: #0094ff;
   border: none;
+  margin: auto;
+  width: 130px;
+  text-align: center;
 }
 
 .left-block {

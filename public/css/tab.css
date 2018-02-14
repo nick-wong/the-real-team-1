@@ -1,12 +1,23 @@
+.breadcrumbs {
+		margin: 5px 0px;
+}
+
 .price {
 	text-align: right
 }
 
+.new-price {
+	margin: 0px;
+	padding: 0px;
+	font-weight: bolder;
+	font-size: 1.25em;
+}
+
 
 .updated {
-	margin-top: 25px;
+	padding-top: 25px;
 	text-align: right;
-	font-size: 65%;
+	font-size: .75em;
 }
 
 .size {
@@ -14,22 +25,19 @@
 	display: inline;
 }
 
-/*.sizeChart {
-	margin-left: 15px;
-	display: inline;
-}*/
-
-.leftImage {
-	float: left;
+.size-text {
+	font-size: 1em;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .rightImage {
-	width: 10%;
 	display: list-item;
 }
 
-.images {
-	float: left;
+.img-thumbnail {
+	padding: 1px;
+	border: none;
 }
 
 .addClass {
@@ -73,4 +81,8 @@
 	height: 50px;
   display: flex;
   flex: 1;
+}
+
+.tab-content {
+	min-height: 300px;
 }

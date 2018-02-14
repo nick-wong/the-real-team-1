@@ -12,50 +12,60 @@
   </div>
 </div>
 <div class="container">
-  <div class="row">
-    <div class="col-xs-6">
-      <div class="images">
+    <div class="breadcrumbs"> <a href="/"> Bottoms </a> > <a href="item"> Jeans </a> </div>
 
-  <p> <a href="index"> Bottoms </a> > <a href="item"> Jeans </a> </p>
-
-        <div class="leftImage">
-          <img src="../img/jeans.JPG" class="img-thumbnail" alt="Levi Jeans" width="150">
-        </div>
-
-          <img src="img/jeans.JPG" class="rightImage img-thumbnail" alt="Levi Jeans" width="150">
-          <img src="img/jeans.JPG" class="rightImage img-thumbnail" alt="Levi Jeans" width="150">
-          <img src="img/jeans.JPG" class="rightImage img-thumbnail" alt="Levi Jeans" width="150">
-
-      </div>
-    </div>
-
-    <div class="col-xs-6 addClass">
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star"></span>
-      <span class="fa fa-star"></span>
-      <p>(3.0 Average <br> 3 Reviews)<br></p>
-      <button type="button" class="btn btn-outline-primary">Add to List</button>
-
-    </div>
-  </div>
-
-  <div class = "sizes">
     <div class="row">
-      <div class="col-xs-6">
-        <h4 class = "sizeChart">Size Chart </h4>
+      <div class="col-xs-2">
       </div>
-      <div class="col-xs-6">
-        <h4 class="size">Size:</h4>
-            <button type="button" class="btn btn-outline-primary">30W</button>
-            <button type="button" class="btn btn-outline-primary">32L</button>
+      <div class="col-xs-6 no-padding">
+        <a href="#"><span class="glyphicon glyphicon-heart-empty"></a>
+        <a href="#" class="item-img"><img src="../img/jeans.JPG" class="img-thumbnail" alt="Levi Jeans"></a>
       </div>
-
+      <div class="col-xs-2 no-padding">
+        <a href="#" class="item-img"><img src="img/jeans.JPG" class="rightImage img-thumbnail" alt="Levi Jeans"></a>
+        <a href="#" class="item-img"><img src="img/jeans.JPG" class="rightImage img-thumbnail" alt="Levi Jeans"></a>
+        <a href="#" class="item-img"><img src="img/jeans.JPG" class="rightImage img-thumbnail" alt="Levi Jeans"></a>
+      </div>
+      <div class="col-xs-2">
+      </div>
     </div>
+
+    <div class="row">
+      <div class="col-xs-2">
+      </div>
+      <div class="col-xs-8 item-info text-center">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <p>(3.0 Average, 3 Reviews)<br></p>
+        <!--<button type="button" class="btn btn-primary stretch-button text-center">Add to Favorites</button>-->
+      </div>
+      <div class="col-xs-2">
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+          <h4 class="size-text"><a href="#">Size Chart </a></h4>
+        </div>
+        <div class="col-xs-2">
+          <h4 class="size-text">Size:</h4>
+        </div>
+        <div class="col-xs-2 no-padding">
+          <button type="button" class="btn btn-outline-primary text-center">30W</button>
+        </div>
+        <div class="col-xs-2 no-padding">
+          <button type="button" class="btn btn-outline-primary">32L</button>
+        </div>
+    </div>
+    <hr>
   </div>
 </div>
-<div id="exTab2" class="container">
+<div id="item-tabs" class="container">
 <ul class="nav nav-tabs">
       <li class="active">
         <a  href="#1" data-toggle="tab">Prices</a>
@@ -71,48 +81,185 @@
       </li>
     </ul>
 
-      <div class="tab-content ">
+      <div class="tab-content">
         <div class="tab-pane active" id="1">
-          <div class="storeName">
             <ul class="list-group">
               <li class="list-group-item">
-                Store #1 <br>
-                <div class="price">
-                  <del>$99.99</del> <b>$29</b>.99   <br>
-                  $29.99 + $0 s/h <br>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <a href="#">Store #1</a>
+                  </div>
+                  <div class="col-xs-6 price">
+                    <del>$99.99</del> <p class="new-price">$29.99</p><br>
+                    $29.99 + free s/h <br>
+                  </div>
                 </div>
                 <div class="updated">
                   Updated 42 minutes ago
                 </div>
               </li>
-              <li class="list-group-item">Store #2 <br>
-                <div class="price">
-                  <del>$99.99</del> <b>$54</b>.98   <br>
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <a href="#">Store #2</a>
+                  </div>
+                  <div class="col-xs-6 price">
+                  <del>$99.99</del> <p class="new-price">$54.98</p> <br>
                   $49.99 + $4.99 s/h <br>
+                </div>
+              </div>
                 <div class="updated">
                   Updated 50 minutes ago
                 </div>
               </li>
-              <li class="list-group-item">Store #3 <br>
-                <div class="price">
-                  <del>$99.99</del> <b>$74</b>.99   <br>
-                  $74.99 + $0 s/h <br>
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <a href="#">Store #3</a>
+                  </div>
+                  <div class="col-xs-6 price">
+                  <del>$99.99</del> <p class="new-price">$74.99</p> <br>
+                  $74.99 + free s/h <br>
+                </div>
+              </div>
                 <div class="updated">
                   Updated 53 minutes ago
                 </div>
               </li>
             </ul>
-            <!-- <h4>Store #1</h4> -->
-          </div>
         </div>
         <div class="tab-pane" id="2">
-          <h4>Product Information</h4>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <p>Information about this particular product.</p>
+            </li>
+          </ul>
         </div>
         <div class="tab-pane" id="3">
-          <h4>Price History</h4>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <canvas id="myChart" width="400" height="400"></canvas>
+                <script>
+                var ctx = document.getElementById("myChart");
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ["Month1", "Month2", "Month3", "Month4", "Month5"],
+                        datasets: [{
+                            label: 'Company',
+                            data: [12, 17, 13, 15, 11],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255,99,132,1)'
+                            ],
+                            borderWidth: 1,
+                            steppedLine: 'true',
+                            fill: 'false'
+                        }, {
+                            label: 'Company',
+                            data: [16, 14, 20, 18, 15],
+                            backgroundColor: [
+                                'rgba(54, 162, 235, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(54, 162, 235, 1)'
+                            ],
+                            borderWidth: 1,
+                            steppedLine: 'true',
+                            fill: 'false'
+                        }]
+                    },
+                    options: {
+                      offset: true,
+                      responsive: true,
+                      scales: {
+                					xAxes: [{
+                						display: true,
+                            ticks: {
+                              autoSkip: false
+                            }
+                					}],
+                					yAxes: [{
+                            ticks: {
+                              beginAtZero: false,
+                            },
+                						display: true
+                					}]
+                				},
+                        gridLines: {
+                          offsetGridLines: true
+                        }
+                    }
+                });
+                </script>
+              </li>
+            </ul>
         </div>
         <div class="tab-pane" id="4">
-          <h4>Reviews</h4>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-xs-6">
+                  <strong>Review Title #1</strong>
+                </div>
+                <div class="col-xs-6 price">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="review-description">
+                <p>Not bad.</p>
+              </div>
+              <div class="updated">
+                Posted 42 minutes ago by username
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-xs-6">
+                  <strong>Review Title #2</strong>
+                </div>
+                <div class="col-xs-6 price">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="review-description">
+                <p>Eh.</p>
+              </div>
+              <div class="updated">
+                Posted 3 days ago by username
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-xs-6">
+                  <strong>Review Title #3</strong>
+                </div>
+                <div class="col-xs-6 price">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="review-description">
+                <p>Wow.</p>
+              </div>
+              <div class="updated">
+                Posted 1 week ago by username
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
   </div>
