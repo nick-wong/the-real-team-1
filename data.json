@@ -6,7 +6,7 @@
 		},
 		{
 			"name": "Jarnin Fang",
-			"favorites": [ {"item": "Black Blazer"}, 
+			"favorites": [ {"item": "Black Blazer"},
 				{"item": "Blue T-Shirt"}, {"item": "Nike Shoes"}]
 		},
 		{
@@ -18,7 +18,7 @@
 	"items": [
 		{
 			"name": "Levi's Jeans",
-			"imageURL": "jeans.JPG",
+			"imageURL": "levis.JPG",
 			"id": 0
 		},
 		{
@@ -46,6 +46,7 @@
 			"imageURL": "adidas_shoes.jpg",
 			"id": 5
 		}
+	],
 
-	]
+	"recommendations": [0, 1, 4]
 }
