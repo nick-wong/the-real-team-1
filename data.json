@@ -1,0 +1,44 @@
+{
+	"users": [
+		{
+			"name": "Nick Wong",
+			"favorites": [ {"Levi's Jeans"}, {"Adidas Track Pants"}]
+		},
+		{
+			"name": "Jarnin Fang",
+			"favorites": [ {"Black Blazer"}, {"Blue T-Shirt"}, {"Nike Shoes"}]
+		},
+		{
+			"name": "Brandon Huang",
+			"favorites": [ {"Adidas Track Pants"}, {"Adidas Shoes"}]
+		}
+	],
+
+	"items": [
+		{
+			"name": "Levi's Jeans",
+			"imageURL": "/img/jeans.JPG"
+		},
+		{
+			"name": "Adidas Track Pants",
+			"imageURL": "/img/adidas_track_pants.jpg"
+		},
+		{
+			"name": "Black Blazer",
+			"imageURL": "/img/black_blazer.jpg"
+		},
+		{
+			"name": "Blue T-Shirt",
+			"imageURL": "/img/blue_t_shirt.JPG"
+		},
+		{
+			"name": "Nike Shoes",
+			"imageURL": "/img/nike_shoes.JPG"
+		},
+		{
+			"name": "Adidas Shoes",
+			"imageURL": "/img/adidas_shoes.jpg"
+		}
+
+	]
+}
