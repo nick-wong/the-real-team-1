@@ -101,9 +101,9 @@ hr {
 }
 
 .glyphicon-heart-empty {
-  font-size: 2em;
-  position:absolute;
-  padding: 10px;
+  font-size: 1.5em;
+  /*position:absolute;
+  padding: 10px;*/
 }
 /* Text */
 .section-title {
