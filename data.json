@@ -2,51 +2,80 @@
 	"users": [
 		{
 			"name": "Nick Wong",
-			"favorites": [ {"item": "Levi's Jeans"}, {"item": "Adidas Track Pants"}]
+			"favorites": [1, 5]
 		},
 		{
 			"name": "Jarnin Fang",
-			"favorites": [ {"item": "Black Blazer"},
-				{"item": "Blue T-Shirt"}, {"item": "Nike Shoes"}]
+			"favorites": [3, 4, 5]
 		},
 		{
 			"name": "Brandon Huang",
-			"favorites": [ {"item": "Adidas Track Pants"}, {"item": "Adidas Shoes"}]
+			"favorites": [0, 2, 4]
 		}
 	],
 
 	"items": [
 		{
+			"id": 0,
 			"name": "Levi's Jeans",
 			"imageURL": "levis.JPG",
-			"id": 0
+			"old_price": "$99.99",
+			"new_price": "$29.99",
+			"short_description": "Black &middot; Denim &middot; Slim Fit",
+			"reviews_num": 3,
+			"favorites_num": 8
 		},
 		{
+			"id": 1,
 			"name": "Adidas Track Pants",
 			"imageURL": "adidas_track_pants.jpg",
-			"id": 1
+			"old_price": "$49.99",
+			"new_price": "$34.98",
+			"short_description": "Black &middot; Polyester &middot; Tapered",
+			"reviews_num": 12,
+			"favorites_num": 31
 		},
 		{
+			"id": 2,
 			"name": "Black Blazer",
 			"imageURL": "black_blazer.jpg",
-			"id": 2
+			"old_price": "$49.99",
+			"new_price": "$22.99",
+			"short_description": "Black &middot; Cotton &middot; Slim Fit",
+			"reviews_num": 6,
+			"favorites_num": 3
 		},
 		{
+			"id": 3,
 			"name": "Blue T-Shirt",
 			"imageURL": "blue_t_shirt.JPG",
-			"id": 3
+			"old_price": "$14.99",
+			"new_price": "$7.99",
+			"short_description": "Blue &middot; Cotton &middot; Regular",
+			"reviews_num": 22,
+			"favorites_num": 9
 		},
 		{
+			"id": 4,
 			"name": "Nike Shoes",
 			"imageURL": "nike_shoes.JPG",
-			"id": 4
+			"old_price": "$99.99",
+			"new_price": "$59.98",
+			"short_description": "Black &middot; Running",
+			"reviews_num": 4,
+			"favorites_num": 11
 		},
 		{
+			"id": 5,
 			"name": "Adidas Shoes",
 			"imageURL": "adidas_shoes.jpg",
-			"id": 5
+			"old_price": "$99.99",
+			"new_price": "$64.99",
+			"short_description": "Black &middot; Training",
+			"reviews_num": 33,
+			"favorites_num": 40
 		}
 	],
 
-	"recommendations": [0, 1, 4]
+	"recommendations": [0, 2, 5]
 }

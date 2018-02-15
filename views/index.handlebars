@@ -35,8 +35,8 @@
               </div>
               <div class="col-xs-6 item-info text-center">
                 <a href="/item/0"><h4><strong>{{name}}</strong></h4></a>
-                <p class="small-text">Black &middot; Denim &middot; Slim Fit</p>
-                <span><del>$99.99</del></span> <span class="new-price">$29.99</span>
+                <p class="small-text">{{{short_description}}}</p>
+                <span><del>{{old_price}}</del></span> <span class="new-price">{{new_price}}</span>
               </div>
               <div class="col-xs-3">
               </div>
@@ -51,12 +51,12 @@
                 <span class="fa fa-star"></span>
                 <span class="fa fa-star"></span>
                 <br>
-                <span>(3)</span>
+                <span>({{reviews_num}})</span>
               </div>
               <div class="col-xs-5 text-center">
                 <a href="#"><span class="glyphicon glyphicon-heart-empty"></a>
                 <br>
-                <span>(8)</span>
+                <span>({{favorites_num}})</span>
               </div>
               <div class="col-xs-1">
               </div>

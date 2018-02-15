@@ -129,6 +129,12 @@ hr {
   margin: 0;
 }
 
+.item-img img {
+  width: 100%;
+  outline: 1px solid #DDDDDD;
+  margin-top: 1px;
+}
+
 .stretch-button {
   display: block;
   background: #0094ff;
