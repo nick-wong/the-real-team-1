@@ -45,7 +45,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/item', item.view);
+app.get('/item', item.viewItem);
+app.get('/item/:id', item.viewItem)
 app.get('/favorites', favorites.view);
 app.get('/settings', settings.view);
 app.get('/top-deals', top_deals.view);
@@ -55,6 +56,7 @@ app.get('/worn-by', worn_by.view);
 app.get('/search-results', search_results.view);
 app.get('/login', login.view);
 app.get('/register', register.view)
+
 // Example route
 // app.get('/users', user.list);
 

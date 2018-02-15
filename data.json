@@ -2,42 +2,49 @@
 	"users": [
 		{
 			"name": "Nick Wong",
-			"favorites": [ {"Levi's Jeans"}, {"Adidas Track Pants"}]
+			"favorites": [ {"item": "Levi's Jeans"}, {"item": "Adidas Track Pants"}]
 		},
 		{
 			"name": "Jarnin Fang",
-			"favorites": [ {"Black Blazer"}, {"Blue T-Shirt"}, {"Nike Shoes"}]
+			"favorites": [ {"item": "Black Blazer"}, 
+				{"item": "Blue T-Shirt"}, {"item": "Nike Shoes"}]
 		},
 		{
 			"name": "Brandon Huang",
-			"favorites": [ {"Adidas Track Pants"}, {"Adidas Shoes"}]
+			"favorites": [ {"item": "Adidas Track Pants"}, {"item": "Adidas Shoes"}]
 		}
 	],
 
 	"items": [
 		{
 			"name": "Levi's Jeans",
-			"imageURL": "/img/jeans.JPG"
+			"imageURL": "jeans.JPG",
+			"id": 0
 		},
 		{
 			"name": "Adidas Track Pants",
-			"imageURL": "/img/adidas_track_pants.jpg"
+			"imageURL": "adidas_track_pants.jpg",
+			"id": 1
 		},
 		{
 			"name": "Black Blazer",
-			"imageURL": "/img/black_blazer.jpg"
+			"imageURL": "black_blazer.jpg",
+			"id": 2
 		},
 		{
 			"name": "Blue T-Shirt",
-			"imageURL": "/img/blue_t_shirt.JPG"
+			"imageURL": "blue_t_shirt.JPG",
+			"id": 3
 		},
 		{
 			"name": "Nike Shoes",
-			"imageURL": "/img/nike_shoes.JPG"
+			"imageURL": "nike_shoes.JPG",
+			"id": 4
 		},
 		{
 			"name": "Adidas Shoes",
-			"imageURL": "/img/adidas_shoes.jpg"
+			"imageURL": "adidas_shoes.jpg",
+			"id": 5
 		}
 
 	]
