@@ -66,12 +66,14 @@
 
     <!-- Search dropdown -->
     <div class="collapse navbar-collapse" id="search-btn">
+      <form>
         <div class="form-group input-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control" id="search-text" placeholder="Search">
           <span class="input-group-btn">
-            <a href="/search-results" class="btn btn-default submit-btn">Search</a>
+            <button id="searcheroni" class="btn btn-default submit-btn">Search</button>
           </span>
         </div>
+      </form>
     </div>
 
     <!-- Navigation dropdown -->
@@ -116,6 +118,14 @@
   			$('.imagepreview').attr('src', $(this).find('img').attr('src'));
   			$('#imagemodal').modal('show');
   		});
+  });
+
+  $(function() {
+    $("#searcheroni").on('click', function(e) {
+      e.preventDefault();
+      //console.log('/search/' + document.getElementById('search-text').value);
+      window.location.href = '/search/' + document.getElementById('search-text').value;
+    });
   });
   </script>
 </body>

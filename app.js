@@ -16,7 +16,7 @@ var top_deals= require('./routes/top-deals');
 var categories = require('./routes/categories');
 var fashion_trends = require('./routes/fashion-trends');
 var worn_by = require('./routes/worn-by');
-var search_results = require('./routes/search-results');
+var search = require('./routes/search');
 var login = require('./routes/login');
 var register = require('./routes/register');
 // Example route
@@ -53,7 +53,8 @@ app.get('/top-deals', top_deals.view);
 app.get('/categories', categories.view);
 app.get('/fashion-trends', fashion_trends.view);
 app.get('/worn-by', worn_by.view);
-app.get('/search-results', search_results.view);
+app.get('/search', search.viewResults);
+app.get('/search/:text', search.viewResults);
 app.get('/login', login.view);
 app.get('/register', register.view)
 

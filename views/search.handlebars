@@ -1,0 +1,68 @@
+<div class = "section-title container">
+  <div class="row arrow">
+    <div class="col-xs-2">
+      <a href="javascript:history.back()"<span class="glyphicon glyphicon-chevron-left back"></span></a>
+    </div>
+
+
+    <div class="col-xs-8">
+      <h4>Search Results</h4>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row text-center">
+    <h5>Results for "{{search_text}}"</h5>
+  </div>
+</div>
+
+{{#each results}}
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3">
+      </div>
+      <div class="col-xs-6 no-padding">
+        <a href="/item/{{id}}" class="item-img"><img src="../img/{{imageURL}}" alt="{{name}}"></a>
+      </div>
+      <div class="col-xs-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">
+      </div>
+      <div class="col-xs-6 item-info text-center">
+        <a href="/item/{{id}}"><h4><strong>{{name}}</strong></h4></a>
+        <p class="small-text">{{{short_description}}}</p>
+        <span><del>{{old_price}}</del></span> <span class="new-price">{{new_price}}</span>
+      </div>
+      <div class="col-xs-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-1">
+      </div>
+      <div class="col-xs-5 text-center">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <br>
+        <span>({{reviews_num}})</span>
+      </div>
+      <div class="col-xs-5 text-center">
+        <a href="#"><span class="glyphicon glyphicon-heart-empty"></a>
+        <br>
+        <span>({{favorites_num}})</span>
+      </div>
+      <div class="col-xs-1">
+      </div>
+    </div>
+    {{#unless @last}}
+    <hr>
+    {{/unless}}
+  </div>
+
+{{/each}}

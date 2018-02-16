@@ -16,6 +16,6 @@ exports.view = function(req, res){
   });
   var name = "test";
 
-  console.log(recommendations_list);
+  // console.log(recommendations_list);
   res.render('index', {'name': name, 'layout': 'defaultLayout', 'recommendations': recommendations_list});
 };
