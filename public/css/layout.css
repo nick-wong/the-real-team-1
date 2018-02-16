@@ -1,6 +1,7 @@
 /* General */
 body {
   padding-top: 50px;
+  height: 100%;
 }
 
 hr {
@@ -41,6 +42,9 @@ hr {
   width: 100%;
 }
 
+.fa-star {
+  height: 1.5em;
+}
 /* Navigation bar */
 .navbar {
   margin-bottom: 0;
