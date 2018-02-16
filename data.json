@@ -18,7 +18,7 @@
 		{
 			"id": 0,
 			"name": "Levi's Jeans",
-			"imageURL": "levis.JPG",
+			"imageURL": "levis.jpg",
 			"old_price": "$99.99",
 			"new_price": "$29.99",
 			"short_description": "Black &middot; Denim &middot; Slim Fit",
@@ -58,7 +58,7 @@
 		{
 			"id": 4,
 			"name": "Nike Shoes",
-			"imageURL": "nike_shoes.JPG",
+			"imageURL": "nike_shoes.jpg",
 			"old_price": "$99.99",
 			"new_price": "$59.98",
 			"short_description": "Black &middot; Running",
