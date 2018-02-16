@@ -48,7 +48,7 @@
 		{
 			"id": 3,
 			"name": "Blue T-Shirt",
-			"imageURL": "blue_t_shirt.JPG",
+			"imageURL": "blue_t_shirt.jpg",
 			"old_price": "$14.99",
 			"new_price": "$7.99",
 			"short_description": "Blue &middot; Cotton &middot; Regular",
