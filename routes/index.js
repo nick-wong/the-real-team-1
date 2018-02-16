@@ -14,7 +14,7 @@ exports.view = function(req, res){
       recommendations_list.push(obj);
     }
   });
-  var name = "test";
+  var name = "You";
 
   // console.log(recommendations_list);
   res.render('index', {'name': name, 'layout': 'defaultLayout', 'recommendations': recommendations_list});

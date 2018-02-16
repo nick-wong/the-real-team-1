@@ -37,7 +37,7 @@
 
 .img-thumbnail {
 	padding: 1px;
-	border: none;
+	border: 1px solid #DDDDDD;
 }
 
 .addClass {
