@@ -51,12 +51,14 @@ app.get('/favorites', favorites.view);
 app.get('/settings', settings.view);
 app.get('/top-deals', top_deals.view);
 app.get('/categories', categories.view);
+app.get('/categories/:category', categories.viewCategory);
 app.get('/fashion-trends', fashion_trends.view);
 app.get('/worn-by', worn_by.view);
 app.get('/search', search.viewResults);
 app.get('/search/:text', search.viewResults);
 app.get('/login', login.view);
-app.get('/register', register.view)
+app.get('/register', register.view);
+app.post('/addToFavorites', favorites.addToFavorites);
 
 // Example route
 // app.get('/users', user.list);

@@ -57,7 +57,7 @@
 
     <!-- User dropdown -->
     <div class="collapse navbar-collapse" id="user-btn">
-      <h4 class="navbar-text">Welcome back, {{name}}!</h4>
+      <h4 class="navbar-text">Welcome back, {{userName}}!</h4>
       <ul class="nav navbar-nav">
         <li><a href="/favorites"><span class="glyphicon glyphicon-heart"></span> &nbsp; Favorites</a></li>
         <li><a href="/settings"><span class="glyphicon glyphicon-cog"></span> &nbsp; Settings</a></li>
@@ -102,23 +102,19 @@
 
 {{{body}}}
 
-<footer>
-  <div class="section-title container">
-    <div class="row text-center">
-      footeroni
-    </div>
-  </div>
-</footer>
+    <div id="snackbar"></div>
+
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <script>
+  var snackbarTimer;
+
   $(document).on('click',function(e){
     if(e.target !== $('.form-control')[0]) {
         $('.navbar-collapse').collapse("hide");
     }
   });
-
 
   $(function() {
   		$('.item-img').on('click', function() {
@@ -132,6 +128,52 @@
       e.preventDefault();
       //console.log('/search/' + document.getElementById('search-text').value);
       window.location.href = '/search/' + document.getElementById('search-text').value;
+    });
+  });
+
+  $(function() {
+    $(".favorites-btn").on('click', function(e) {
+      e.preventDefault();
+      var x = document.getElementById("snackbar")
+/*
+      if(x.classList.contains("show")) {
+        x.className.replace("show", "");
+      }*/
+      clearTimeout(snackbarTimer);
+      // Add the "show" class to DIV
+      x.className = "show";
+
+      var isCarousel = $("div.active .item-name").text().length != 0;
+      var isItemPage = $(this).closest('.row').siblings().find('.item-name').text().length == 0;
+      var favoritesChange;
+      console.log($(this).parent().closest('div[id]').attr('id'));
+
+      if($(this).hasClass("glyphicon-heart-empty")) {
+        $(this).removeClass("glyphicon-heart-empty").addClass("glyphicon-heart");
+        favoritesChange = " Added to ";
+        $.post('/addToFavorites/', {'item': $(this).parent().closest('div[id]').attr('id')});
+      }
+      else {
+        $(this).removeClass("glyphicon-heart").addClass("glyphicon-heart-empty");
+        favoritesChange = " Removed from ";
+        $.post('/addToFavorites/', {'item': $(this).parent().closest('div[id]').attr('id')});
+      }
+
+      if(isCarousel) {
+        $("#snackbar").html("<strong>" + $("div.active .item-name").text() +
+          '</strong>' + favoritesChange + '<a href="/favorites"><strong>Favorites</strong></a>!');
+      }
+      else if(isItemPage) {
+        $("#snackbar").html("<strong>" + $(".item-name").text() +
+          '</strong>' + favoritesChange + '<a href="/favorites"><strong>Favorites</strong></a>!');
+      }
+      else {
+        $("#snackbar").html("<strong>" + $(this).closest('.row').siblings().find('.item-name').text() +
+          '</strong>' + favoritesChange + '<a href="/favorites"><strong>Favorites</strong></a>!');
+      }
+
+      // After 3 seconds, remove the show class from DIV
+      snackbarTimer = setTimeout(function(){ x.className = x.className.replace("show", "");}, 3000);
     });
   });
   </script>

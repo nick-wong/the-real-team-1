@@ -11,6 +11,12 @@ exports.viewItem = function(req, res){
   // }
 
   var newItem = data.items[req.params.id];
+
+  newItem.favorited = false;
+  if(data.users[0].favorites.includes(newItem.id)) {
+    newItem.favorited = true;
+  }
+  console.log(newItem);
   newItem['layout'] = 'defaultLayout';
   res.render('item', newItem);
 

@@ -10,12 +10,16 @@ exports.view = function(req, res){
 
   var recommendations_list = [];
   items.forEach(function(obj) {
+    obj.favorited = false;
+    if(data.users[0].favorites.includes(obj.id)) {
+      obj.favorited = true;
+    }
     if (recommendations.includes(obj.id)) {
       recommendations_list.push(obj);
     }
   });
   var name = "You";
 
-  // console.log(recommendations_list);
-  res.render('index', {'name': name, 'layout': 'defaultLayout', 'recommendations': recommendations_list});
+  console.log(recommendations_list);
+  res.render('index', {'userName': name, 'layout': 'defaultLayout', 'recommendations': recommendations_list});
 };
