@@ -132,32 +132,45 @@
     });
   });
 
+  function undoRemoveFavorites(id) {
+    //$.post('/addToFavorites/', {'item': id});
+    if($("#" + id + ".container").hasClass("collapse")) {
+      $("#" + id + ".container").collapse('show');
+    }
+    //console.log($("#" + id + ".container").attr("class"));
+    $("#" + id + " .favorites-btn").trigger("click");
+  }
+
   $(function() {
     $(".favorites-btn").on('click', function(e) {
       e.preventDefault();
       var x = document.getElementById("snackbar")
-/*
-      if(x.classList.contains("show")) {
-        x.className.replace("show", "");
-      }*/
+
+      // Restart snackbar
       clearTimeout(snackbarTimer);
+      x.classList.remove("show");
+      void x.offsetWidth;
+
       // Add the "show" class to DIV
       x.className = "show";
 
+      var item_id = $(this).parent().closest('div[id]').attr('id');
       var isCarousel = $("div.active .item-name").text().length != 0;
       var isItemPage = $(this).closest('.row').siblings().find('.item-name').text().length == 0;
       var favoritesChange;
-      console.log($(this).parent().closest('div[id]').attr('id'));
+      var undo = "";
+      //Zconsole.log($(this).parent().closest('div[id]').attr('id'));
 
       if($(this).hasClass("glyphicon-heart-empty")) {
         $(this).removeClass("glyphicon-heart-empty").addClass("glyphicon-heart");
         favoritesChange = " Added to ";
-        $.post('/addToFavorites/', {'item': $(this).parent().closest('div[id]').attr('id')});
+        $.post('/addToFavorites/', {'item': item_id});
       }
       else {
         $(this).removeClass("glyphicon-heart").addClass("glyphicon-heart-empty");
         favoritesChange = " Removed from ";
-        $.post('/addToFavorites/', {'item': $(this).parent().closest('div[id]').attr('id')});
+        $.post('/addToFavorites/', {'item': item_id});
+        undo = ' <button type="button" class="btn btn-link no-padding" onclick="undoRemoveFavorites(' + item_id + ');"> Undo</button>';
       }
 
       if(isCarousel) {
@@ -170,7 +183,7 @@
       }
       else {
         $("#snackbar").html("<strong>" + $(this).closest('.row').siblings().find('.item-name').text() +
-          '</strong>' + favoritesChange + '<a href="/favorites"><strong>Favorites</strong></a>!');
+          '</strong>' + favoritesChange + '<a href="/favorites"><strong>Favorites</strong></a>!' + undo);
       }
 
       // After 3 seconds, remove the show class from DIV
