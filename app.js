@@ -52,7 +52,6 @@ app.get('/', index.view);
 app.get('/item', item.viewItem);
 app.get('/item/:id', item.viewItem)
 app.get('/favorites', favorites.view);
-app.get('/settings', settings.view);
 app.get('/top-deals', top_deals.view);
 app.get('/categories', categories.view);
 app.get('/categories/:category', categories.viewCategory);
@@ -62,9 +61,10 @@ app.get('/search', search.viewResults);
 app.get('/search/:text', search.viewResults);
 app.get('/login', login.view);
 app.get('/register', register.view);
-app.get('/user', user.view);
-app.get('/email', email.view);
-app.get('/password', password.view);
+app.get('/settings', settings.view);
+app.get('/settings/user', user.view);
+app.get('/settings/email', email.view);
+app.get('/settings/password', password.view);
 app.post('/addToFavorites', favorites.addToFavorites);
 
 // Example route
