@@ -10,7 +10,7 @@ exports.viewResults = function(req, res){
 
     var search_results = [];
     items.forEach(function(obj) {
-      if (obj.name.toLowerCase().includes(search_text)) {
+      if (obj.name.toLowerCase().indexOf(search_text) >= 0) {
         search_results.push(obj);
       }
     });

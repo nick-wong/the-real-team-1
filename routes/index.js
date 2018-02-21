@@ -11,10 +11,10 @@ exports.view = function(req, res){
   var recommendations_list = [];
   items.forEach(function(obj) {
     obj.favorited = false;
-    if(data.users[0].favorites.includes(obj.id)) {
+    if(data.users[0].favorites.indexOf(obj.id) >= 0) {
       obj.favorited = true;
     }
-    if (recommendations.includes(obj.id)) {
+    if (recommendations.indexOf(obj.id) >= 0) {
       recommendations_list.push(obj);
     }
   });

@@ -7,7 +7,47 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
+var mongoose = require('mongoose');
+var passport = require('passport');
+var flash = require('connect-flash');
 
+//Configuration imports
+var configDB = require('./config/database.js');
+
+//MongoDB connection
+mongoose.connect(configDB.url);
+
+var app = express();
+
+
+// all environments
+app.set('port', process.env.PORT || 3000);
+app.set('views', path.join(__dirname, 'views'));
+app.engine('handlebars', handlebars());
+app.set('view engine', 'handlebars');
+app.use(express.favicon());
+app.use(express.logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded());
+app.use(express.methodOverride());
+app.use(express.cookieParser('IxD secret key'));
+app.use(express.session());
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+//passport stuff
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+require('./config/passport')(passport);
+app.use(app.router);
+
+// development only
+if ('development' == app.get('env')) {
+  app.use(express.errorHandler());
+}
+
+//Routes
 var index = require('./routes/index');
 var item = require('./routes/item');
 var favorites = require('./routes/favorites');
@@ -22,31 +62,8 @@ var register = require('./routes/register');
 var user = require('./routes/user');
 var email = require('./routes/email');
 var password = require('./routes/password');
-
 // Example route
 // var user = require('./routes/user');
-
-var app = express();
-
-// all environments
-app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', handlebars());
-app.set('view engine', 'handlebars');
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.methodOverride());
-app.use(express.cookieParser('IxD secret key'));
-app.use(express.session());
-app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
-
-// development only
-if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
-}
 
 app.get('/', index.view);
 app.get('/item', item.viewItem);
@@ -60,11 +77,27 @@ app.get('/worn-by', worn_by.view);
 app.get('/search', search.viewResults);
 app.get('/search/:text', search.viewResults);
 app.get('/login', login.view);
+app.post('/login', passport.authenticate('local-login', {
+  failureRedirect : '/login',
+  failureFlash : 'true'
+}), function(req, res) {
+  res.redirect('/');
+});
 app.get('/register', register.view);
+
+app.post('/register', passport.authenticate('local-register', {
+  failureRedirect : '/register',
+  failureFlash : true
+}), function (req, res) {
+  res.redirect('/login');
+});
+
 app.get('/settings', settings.view);
 app.get('/settings/user', user.view);
 app.get('/settings/email', email.view);
 app.get('/settings/password', password.view);
+
+
 app.post('/addToFavorites', favorites.addToFavorites);
 
 // Example route
