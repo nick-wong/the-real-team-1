@@ -19,29 +19,67 @@
 
 <hr class="no-padding no-margin">
 
-<div class="container content">
+<br>
 
-<div class="row text-center text-lg-left">
+{{#each category_items}}
+  <div class="container" id="{{id}}">
+    <div class="row">
+      <div class="col-xs-3">
+      </div>
+      <div class="col-xs-6 no-padding">
+        <a href="/item/{{id}}" class="img-thumbnail"><img src="../img/{{imageURL}}" alt="{{name}}"></a>
+      </div>
+      <div class="col-xs-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">
+      </div>
+      <div class="col-xs-6 item-info text-center">
+        <a href="/item/{{id}}"><h4 class="item-name"><strong>{{name}}</strong></h4></a>
+        <p class="small-text">{{{short_description}}}</p>
+        <span><del>${{old_price}}</del></span> <span class="new-price">${{new_price}}</span>
+      </div>
+      <div class="col-xs-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-1">
+      </div>
+      <div class="col-xs-5 text-center">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </div>
+      <div class="col-xs-5 text-center">
+      {{#if favorited}}
+        <span class="favorites-btn glyphicon glyphicon-heart text-danger"></span>
+      {{else}}
+        <span class="favorites-btn glyphicon glyphicon-heart-empty text-danger"></span>
+      {{/if}}
+      </div>
+      <div class="col-xs-1">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-1">
+      </div>
+      <div class="col-xs-5 text-center">
+        <span>({{reviews_num}})</span>
+      </div>
+      <div class="col-xs-5 text-center">
+        <span>({{favorites_num}})</span>
+      </div>
+      <div class="col-xs-1">
+      </div>
+    </div>
+    {{#unless @last}}
+    <hr>
+    {{/unless}}
+  </div>
 
-<div class="col-lg-3 col-md-4 col-xs-6">
-  <a href="#" class="d-block mb-4 h-100">
-    <img class="img-fluid img-thumbnail" src="../img/jeans.JPG" alt="">
-  </a>
-</div>
-<div class="col-lg-3 col-md-4 col-xs-6">
-  <a href="#" class="d-block mb-4 h-100">
-    <img class="img-fluid img-thumbnail" src="../img/black_blazer.jpg" alt="">
-  </a>
-</div>
-<div class="col-lg-3 col-md-4 col-xs-6">
-  <a href="#" class="d-block mb-4 h-100">
-    <img class="img-fluid img-thumbnail" src="../img/blue_t_shirt.jpg" alt="">
-  </a>
-</div>
-<div class="col-lg-3 col-md-4 col-xs-6">
-  <a href="#" class="d-block mb-4 h-100">
-    <img class="img-fluid img-thumbnail" src="../img/nike_shoes.jpg" alt="">
-  </a>
-</div>
-</div>
-</div>
+{{/each}}
+
+<br>

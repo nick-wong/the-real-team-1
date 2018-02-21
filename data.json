@@ -67,7 +67,7 @@
 			"reviews_num": 22,
 			"favorites_num": 9,
 			"category": "tops",
-			"subcategory": ["t-shirt"],
+			"subcategory": ["t-shirt", "shirt"],
 			"brand": "Hanes",
 			"color": ["cobalt"]
 		},
@@ -91,11 +91,11 @@
 			"imageURL": "adidas_shoes.jpg",
 			"old_price": 99.99,
 			"new_price": 44.99,
-			"short_description": "Black &middot; Training",
+			"short_description": "Grey &middot; Training",
 			"reviews_num": 33,
 			"favorites_num": 40,
-			"category": "bottoms",
-			"subcategory": ["athletic", "pants", "training"],
+			"category": "shoes",
+			"subcategory": ["athletic", "training"],
 			"brand": "Adidas",
 			"color": ["grey"]
 		}

@@ -13,7 +13,7 @@ exports.viewItem = function(req, res){
   var newItem = data.items[req.params.id];
 
   newItem.favorited = false;
-  if(data.users[0].favorites.includes(newItem.id)) {
+  if(data.users[0].favorites.indexOf(newItem.id) >= 0) {
     newItem.favorited = true;
   }
   console.log(newItem);

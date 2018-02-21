@@ -7,7 +7,7 @@ exports.view = function(req, res){
   var items = data.items;
 
   items.forEach(function(obj) {
-    if (favoritesArray.includes(obj.id)) {
+    if (favoritesArray.indexOf(obj.id) >= 0) {
       favorites.push(obj);
     }
   });
@@ -15,8 +15,8 @@ exports.view = function(req, res){
   res.render('favorites', {'layout' : 'defaultLayout', 'favorites' : favorites});
 };
 
-exports.addToFavorites = function(req, res){
-  if(data.users[0]['favorites'].includes(parseInt(req.body.item))) {
+exports.addToFavorites = function(req, res) {
+  if(data.users[0]['favorites'].indexOf(parseInt(req.body.item)) >= 0) {
     data.users[0]['favorites'].splice(data.users[0]['favorites'].indexOf(parseInt(req.body.item)), 1);
   }
   else {
