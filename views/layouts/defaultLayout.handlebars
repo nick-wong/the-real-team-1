@@ -107,7 +107,8 @@
 
 {{{body}}}
 
-    <div id="snackbar"></div>
+<button onclick="topFunction()" id="scroll-top" title="Go to top"><span class="glyphicon glyphicon-chevron-up"></span></button>
+<div id="snackbar"></div>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -137,7 +138,6 @@
   });
 
   function undoRemoveFavorites(id) {
-    //$.post('/addToFavorites/', {'item': id});
     if($("#" + id + ".container").hasClass("collapse")) {
       $("#" + id + ".container").collapse('show');
     }
@@ -194,6 +194,24 @@
       snackbarTimer = setTimeout(function(){ x.className = x.className.replace("show", "");}, 3000);
     });
   });
+
+  // Scroll to tops
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          document.getElementById("scroll-top").style.display = "block";
+      } else {
+          document.getElementById("scroll-top").style.display = "none";
+      }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
   </script>
 </body>
 </html>
