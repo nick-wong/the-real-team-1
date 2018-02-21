@@ -79,7 +79,7 @@ app.get('/search/:text', search.viewResults);
 app.get('/login', login.view);
 app.post('/login', passport.authenticate('local-login', {
   failureRedirect : '/login',
-  failureFlash : 'true'
+  failureFlash : 'true' 
 }), function(req, res) {
   res.redirect('/');
 });
