@@ -3,5 +3,5 @@ exports.view = function(req, res){
 };
 
 exports.viewCategory = function(req, res){
-  res.render('categories', {'layout' : 'defaultLayout'});
+  res.render('category-items', {'layout' : 'defaultLayout'});
 };

@@ -19,9 +19,6 @@ var worn_by = require('./routes/worn-by');
 var search = require('./routes/search');
 var login = require('./routes/login');
 var register = require('./routes/register');
-var user = require('./routes/user');
-var email = require('./routes/email');
-var password = require('./routes/password');
 
 // Example route
 // var user = require('./routes/user');
@@ -62,9 +59,9 @@ app.get('/search/:text', search.viewResults);
 app.get('/login', login.view);
 app.get('/register', register.view);
 app.get('/settings', settings.view);
-app.get('/settings/user', user.view);
-app.get('/settings/email', email.view);
-app.get('/settings/password', password.view);
+app.get('/settings/user', settings.viewUserProfile);
+app.get('/settings/email', settings.viewChangeEmail);
+app.get('/settings/password', settings.viewChangePassword);
 app.post('/addToFavorites', favorites.addToFavorites);
 
 // Example route

@@ -1,6 +1,7 @@
 /* General */
 body {
   padding-top: 50px;
+
 }
 
 hr {
@@ -190,7 +191,7 @@ hr {
    border-radius: 2px; /* Rounded borders */
    padding: 16px; /* Padding */
    position: fixed; /* Sit on top of the screen */
-   z-index: 1; /* Add a z-index if needed */
+   z-index: 999; /* Add a z-index if needed */
    /*left: 50%; /* Center the snackbar */
    bottom: 30px; /* 30px from the bottom */
    left: 50%;
@@ -229,6 +230,24 @@ However, delay the fade out process for 2.5 seconds */
    to {bottom: 0; opacity: 0;}
 }
 
+/* Settings */
+.settings-btn {
+  background-image: none;
+  background-color: #7092BE;
+  color: white;
+  text-shadow: none;
+  border: none;
+}
+
+#profile-picture {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.filter-settings {
+  background-color: #F8F8F8;
+}
+
 /* Etc */
 .filter  {
   border-color: #ddd;
@@ -239,7 +258,7 @@ However, delay the fade out process for 2.5 seconds */
   margin-top: 8px;
   margin-right: 15px;
   margin-bottom: 8px;
-  background-color: transparent;
+  background-color: white;
   background-image: none;
   border: 1px solid #ddd;
   border-radius: 4px;
