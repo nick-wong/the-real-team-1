@@ -21,9 +21,13 @@
 			"imageURL": "levis.jpg",
 			"old_price": 99.99,
 			"new_price": 29.99,
-			"short_description": "Black &middot; Denim &middot; Slim Fit",
+			"short_description": "Blue &middot; Denim &middot; Slim Fit",
 			"reviews_num": 3,
-			"favorites_num": 8
+			"favorites_num": 8,
+			"category": "bottoms",
+			"subcategory": ["jeans", "denim", "pants"],
+			"brand": "Levi's",
+			"color": "blue"
 		},
 		{
 			"id": 1,
@@ -33,7 +37,11 @@
 			"new_price": 34.98,
 			"short_description": "Black &middot; Polyester &middot; Tapered",
 			"reviews_num": 12,
-			"favorites_num": 31
+			"favorites_num": 31,
+			"category": "bottoms",
+			"subcategory": ["active", "pants", "sweatpants"],
+			"brand": "Adidas",
+			"colors": ["black"]
 		},
 		{
 			"id": 2,
@@ -43,7 +51,11 @@
 			"new_price": 22.99,
 			"short_description": "Black &middot; Cotton &middot; Slim Fit",
 			"reviews_num": 6,
-			"favorites_num": 3
+			"favorites_num": 3,
+			"category": "tops",
+			"subcategory": ["jacket", "blazer"],
+			"brand": "Calvin & Klein",
+			"color": ["black"]
 		},
 		{
 			"id": 3,
@@ -53,7 +65,11 @@
 			"new_price": 7.99,
 			"short_description": "Blue &middot; Cotton &middot; Regular",
 			"reviews_num": 22,
-			"favorites_num": 9
+			"favorites_num": 9,
+			"category": "tops",
+			"subcategory": ["t-shirt", "shirt"],
+			"brand": "Hanes",
+			"color": ["cobalt"]
 		},
 		{
 			"id": 4,
@@ -63,7 +79,11 @@
 			"new_price": 59.98,
 			"short_description": "Black &middot; Running",
 			"reviews_num": 4,
-			"favorites_num": 11
+			"favorites_num": 11,
+			"category": "shoes",
+			"subcategory": ["athletic", "running"],
+			"brand": "Adidas",
+			"color": ["black", "white"]
 		},
 		{
 			"id": 5,
@@ -71,9 +91,13 @@
 			"imageURL": "adidas_shoes.jpg",
 			"old_price": 99.99,
 			"new_price": 44.99,
-			"short_description": "Black &middot; Training",
+			"short_description": "Grey &middot; Training",
 			"reviews_num": 33,
-			"favorites_num": 40
+			"favorites_num": 40,
+			"category": "shoes",
+			"subcategory": ["athletic", "training"],
+			"brand": "Adidas",
+			"color": ["grey"]
 		}
 	],
 

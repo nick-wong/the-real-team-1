@@ -1,20 +1,27 @@
-<div class = "section-title container">
-  <div class="row arrow">
+<div class="section-title container">
+  <h4>Categories</h4>
+</div>
+
+<div class="container filter-settings">
+  <div class="row">
     <div class="col-xs-2">
-      <a href="javascript:history.back()"<span class="glyphicon glyphicon-chevron-left back"></span></a>
+      <h4 class="filter-text">Filter(s): </h4>
     </div>
-
-
     <div class="col-xs-8">
-      <h4>Top Deals</h4>
     </div>
-
+    <div class="col-xs-2 no-padding">
+      <button type="button" class="filter" data-toggle="modal" data-target="#exampleModal">
+        <span class="glyphicon glyphicon-filter"></span>
+      </button>
+    </div>
   </div>
 </div>
 
+<hr class="no-padding no-margin">
+
 <br>
 
-{{#each topItems}}
+{{#each category_items}}
   <div class="container" id="{{id}}">
     <div class="row">
       <div class="col-xs-3">
