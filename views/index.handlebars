@@ -5,9 +5,13 @@
   <div id="myCarousel" class="carousel slide content" data-interval="false" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
+      {{#each recommendations}}
+        {{#if @first}}
+          <li data-target="#myCarousel" data-slide-to="{{@index}}" class="active"></li>
+        {{else}}
+          <li data-target="#myCarousel" data-slide-to="{{@index}}"></li>
+        {{/if}}
+      {{/each}}
     </ol>
 
     <!-- Wrapper for slides -->
@@ -93,28 +97,25 @@
 
   <div class="container content">
 
-    <div class="row text-center text-lg-left">
+    <div class="row text-center">
+      <div class="col-xs-offset-3 col-xs-6">
+        <a href="/categories/accessories">
+          <img class="img-thumbnail" src="../img/black_hat.png" alt="">
+          <br>
+          Accessories
+        </a>
+      </div>
+    </div>
 
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="../img/jeans.JPG" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="../img/black_blazer.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="../img/blue_t_shirt.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="../img/nike_shoes.jpg" alt="">
-        </a>
-      </div>
+    <br>
 
+    <div class="row text-center">
+      <div class="col-xs-offset-3 col-xs-6">
+        <a href="/categories/shoes">
+          <img class="img-thumbnail" src="../img/nike_shoes.jpg" alt="">
+          <br>
+          Shoes
+        </a>
+      </div>
     </div>
   </div>
