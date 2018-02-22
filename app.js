@@ -3,13 +3,13 @@
  * Module dependencies.
  */
 
-var express = require('express');
-var http = require('http');
-var path = require('path');
-var handlebars = require('express3-handlebars')
-var mongoose = require('mongoose');
-var passport = require('passport');
-var flash = require('connect-flash');
+ var express = require('express');
+ var http = require('http');
+ var path = require('path');
+ var handlebars = require('express3-handlebars')
+ var mongoose = require('mongoose');
+ var passport = require('passport');
+ var flash = require('connect-flash');
 
 //Configuration imports
 var configDB = require('./config/database.js');
@@ -88,6 +88,16 @@ app.post('/register', passport.authenticate('local-register', {
 }), function (req, res) {
   res.redirect('/login');
 });
+
+app.get('/auth/facebook', passport.authenticate('facebook', { 
+  scope : ['public_profile', 'email']
+}));
+
+app.get('/auth/facebook/callback',
+  passport.authenticate('facebook', {
+    successRedirect : '/',
+    failureRedirect : '/login'
+}));
 
 app.get('/settings', settings.view);
 app.get('/settings/user', settings.viewUserProfile);

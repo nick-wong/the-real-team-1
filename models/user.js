@@ -7,6 +7,12 @@ var bcrypt   = require('bcrypt-nodejs');
 var userSchema = mongoose.Schema({
   email        : String,
   password     : String,
+  facebook         : {
+        id           : String,
+        token        : String,
+        name         : String,
+        email        : String
+  },
 });
 
 // generating a hash
