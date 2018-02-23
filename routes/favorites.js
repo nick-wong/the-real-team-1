@@ -1,6 +1,7 @@
 var data = require('../data.json');
 
 exports.view = function(req, res){
+  var user = req.user;
   console.log(data.users);
   var favoritesArray = data.users[0].favorites;
   var favorites = [];
@@ -12,7 +13,7 @@ exports.view = function(req, res){
     }
   });
 
-  res.render('favorites', {'layout' : 'defaultLayout', 'favorites' : favorites});
+  res.render('favorites', {'layout' : 'defaultLayout', 'favorites' : favorites, 'user': user});
 };
 
 exports.addToFavorites = function(req, res) {

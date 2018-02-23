@@ -5,6 +5,7 @@ exports.view = function(req, res){
 };
 
 exports.viewCategory = function(req, res){
+  var user = req.user;
   var category = req.params.category.toLowerCase();
   var items = data.items;
 
@@ -33,5 +34,5 @@ exports.viewSubcategory = function(req, res){
       category_items.push(obj);
     }
   });
-  res.render('category-items', {'layout' : 'defaultLayout', 'category_items': category_items, 'is_subcategory': true});
+  res.render('category-items', {'layout' : 'defaultLayout', 'category_items': category_items, 'is_subcategory': true, 'user': user});
 };

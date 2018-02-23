@@ -4,6 +4,7 @@ var data = require("../data.json");
 // for (var i = 0; len = array.length; i < )
 
 exports.viewItem = function(req, res){
+  var user = req.user;
   // var newItem = {
   // 	name : req.query.name,
   // 	id : req.params.id,
@@ -32,6 +33,7 @@ exports.viewItem = function(req, res){
     return a.current_price - b.current_price;
 });
   newItem['layout'] = 'defaultLayout';
+  newItem.user = user;
   console.log(newItem);
   res.render('item', newItem);
 

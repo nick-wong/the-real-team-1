@@ -34,7 +34,6 @@ app.use(express.cookieParser('IxD secret key'));
 app.use(express.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 //passport stuff
 app.use(passport.initialize());
 app.use(passport.session());
@@ -63,6 +62,7 @@ var user = require('./routes/user')
 // Example route
 // var user = require('./routes/user');
 
+<<<<<<< HEAD
 app.get('/', index.view);
 app.get('/item', item.viewItem);
 app.get('/item/:id', item.viewItem)
@@ -75,6 +75,8 @@ app.get('/fashion-trends', fashion_trends.view);
 app.get('/worn-by', worn_by.view);
 app.get('/search', search.viewResults);
 app.get('/search/:text', search.viewResults);
+=======
+>>>>>>> 0a6e41b8e9b4d8d32533fc530b070d68f53287c2
 app.get('/login', login.view);
 app.post('/login', passport.authenticate('local-login', {
   failureRedirect : '/login',
@@ -100,6 +102,26 @@ app.get('/auth/facebook/callback',
     successRedirect : '/',
     failureRedirect : '/login'
 }));
+
+app.get('*', function(req, res, next) {
+  if(!req.user) {
+    res.redirect('/login')
+  } else {
+    next();
+  }
+});
+
+app.get('/', index.view);
+app.get('/item', item.viewItem);
+app.get('/item/:id', item.viewItem)
+app.get('/favorites', favorites.view);
+app.get('/top-deals', top_deals.view);
+app.get('/categories', categories.view);
+app.get('/categories/:category', categories.viewCategory);
+app.get('/fashion-trends', fashion_trends.view);
+app.get('/worn-by', worn_by.view);
+app.get('/search', search.viewResults);
+app.get('/search/:text', search.viewResults);
 
 app.get('/settings', settings.view);
 app.get('/user', user.view);

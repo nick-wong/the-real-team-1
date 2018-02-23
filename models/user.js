@@ -12,7 +12,7 @@ var userSchema = mongoose.Schema({
         id           : String,
         token        : String,
         name         : String,
-        email        : String
+        email        : String,
   },
 });
 
@@ -23,7 +23,11 @@ userSchema.methods.generateHash = function(password) {
 
 // checking if password is valid
 userSchema.methods.validPassword = function(password) {
-  return bcrypt.compareSync(password, this.password);
+  if(this.password != null) {
+        return bcrypt.compareSync(password, this.password);
+    } else {
+        return false;
+    }
 };
 
 // create the model for users and expose it to our app

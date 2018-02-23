@@ -1,6 +1,7 @@
 var data = require('../data.json');
 
 exports.view = function(req, res){
+  var user = req.user;
   var items = data.items;
   var topFavorites = [];
   var topFavoritesSorted = [];
@@ -25,5 +26,5 @@ exports.view = function(req, res){
   //console.log(topItems);
   console.log(fashionTrends);
 
-  res.render('fashion-trends', {'layout' : 'defaultLayout', 'fashionTrends': fashionTrends});
+  res.render('fashion-trends', {'layout' : 'defaultLayout', 'fashionTrends': fashionTrends, 'user': user});
 };

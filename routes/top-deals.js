@@ -1,6 +1,7 @@
 var data = require('../data.json');
 
 exports.view = function(req, res){
+  var user = req.user;
   var items = data.items;
   var itemSavings = [];
   var itemSavingsSorted = [];
@@ -23,5 +24,5 @@ exports.view = function(req, res){
   }
   //console.log(topItems);
 
-  res.render('top-deals', {'layout' : 'defaultLayout', 'topItems': topItems});
+  res.render('top-deals', {'layout' : 'defaultLayout', 'topItems': topItems, 'user': user});
 };

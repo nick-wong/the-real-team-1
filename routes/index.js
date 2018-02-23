@@ -5,6 +5,7 @@ var data = require("../data.json");
  */
 
 exports.view = function(req, res){
+  var user = req.user;
   var items = data.items;
   var recommendations = data.recommendations;
 
@@ -21,5 +22,5 @@ exports.view = function(req, res){
   var name = "You";
 
   console.log(recommendations_list);
-  res.render('index', {'userName': name, 'layout': 'defaultLayout', 'recommendations': recommendations_list});
+  res.render('index', {'user': user, 'layout': 'defaultLayout', 'recommendations': recommendations_list});
 };
