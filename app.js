@@ -34,7 +34,6 @@ app.use(express.cookieParser('IxD secret key'));
 app.use(express.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 //passport stuff
 app.use(passport.initialize());
 app.use(passport.session());

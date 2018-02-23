@@ -1,3 +1,4 @@
 exports.view = function(req, res){
-  res.render('login', {'layout' : false});
+  var user = req.user;
+  res.render('login', {'layout' : false, 'user': user});
 };

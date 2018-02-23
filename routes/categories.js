@@ -5,6 +5,7 @@ exports.view = function(req, res){
 };
 
 exports.viewCategory = function(req, res){
+  var user = req.user;
   var category = req.params.category;
   var items = data.items;
 

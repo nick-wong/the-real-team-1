@@ -1,6 +1,7 @@
 var data = require('../data.json');
 
 exports.view = function(req, res){
+  var user = req.user;
   var items = data.items;
   var topFavorites = [];
   var topFavoritesSorted = [];
