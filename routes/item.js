@@ -27,6 +27,10 @@ exports.viewItem = function(req, res){
     obj['current_price'] = obj.prices[obj.prices.length-1].price;
   });
   newItem.item_type[newItem.category] = true;
+
+  newItem.stores.sort(function(a, b) {
+    return a.current_price - b.current_price;
+});
   newItem['layout'] = 'defaultLayout';
   console.log(newItem);
   res.render('item', newItem);

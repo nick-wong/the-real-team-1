@@ -24,8 +24,8 @@
 			"short_description": "Blue &middot; Denim &middot; Slim Fit",
 			"reviews_num": 3,
 			"favorites_num": 8,
-			"category": "Bottoms",
-			"subcategory": ["Jeans", "Denim", "Pants"],
+			"category": "bottoms",
+			"subcategory": ["jeans", "denim", "pants"],
 			"brand": "Levi's",
 			"colors": ["blue"],
 			"stores": [
@@ -82,8 +82,8 @@
 			"short_description": "Black &middot; Polyester &middot; Tapered",
 			"reviews_num": 12,
 			"favorites_num": 31,
-			"category": "Bottoms",
-			"subcategory": ["Track", "Active", "Pants", "Sweatpants"],
+			"category": "bottoms",
+			"subcategory": ["track", "active", "pants", "sweatpants"],
 			"brand": "Adidas",
 			"colors": ["black"],
 			"stores": [
@@ -140,8 +140,8 @@
 			"short_description": "Black &middot; Cotton &middot; Slim Fit",
 			"reviews_num": 6,
 			"favorites_num": 3,
-			"category": "Tops",
-			"subcategory": ["Jacket", "Blazer"],
+			"category": "tops",
+			"subcategory": ["jacket", "blazer"],
 			"brand": "Calvin & Klein",
 			"color": ["black"],
 			"stores": [
@@ -198,8 +198,8 @@
 			"short_description": "Blue &middot; Cotton &middot; Regular",
 			"reviews_num": 22,
 			"favorites_num": 9,
-			"category": "Tops",
-			"subcategory": ["T-shirt", "Shirt"],
+			"category": "tops",
+			"subcategory": ["t-shirt", "shirt"],
 			"brand": "Hanes",
 			"color": ["cobalt"],
 			"stores": [
@@ -225,7 +225,7 @@
 					]
 				},
 				{
-					"store": "Asos",
+					"store": "Hanes",
 					"prices": [
 						{
 							"date": "2017-10-13T23:35:01",
@@ -256,13 +256,13 @@
 			"short_description": "Black &middot; Running",
 			"reviews_num": 4,
 			"favorites_num": 11,
-			"category": "Shoes",
-			"subcategory": ["Running", "Athletic"],
+			"category": "shoes",
+			"subcategory": ["running", "athletic"],
 			"brand": "Adidas",
 			"color": ["black", "white"],
 			"stores": [
 				{
-					"store": "Amazon",
+					"store": "Nike",
 					"prices": [
 						{
 							"date": "2017-10-01T23:35:01",
@@ -283,7 +283,7 @@
 					]
 				},
 				{
-					"store": "Asos",
+					"store": "Finish Line",
 					"prices": [
 						{
 							"date": "2017-10-13T23:35:01",
@@ -314,13 +314,13 @@
 			"short_description": "Grey &middot; Training",
 			"reviews_num": 33,
 			"favorites_num": 40,
-			"category": "Shoes",
-			"subcategory": ["Training", "Athletic"],
+			"category": "shoes",
+			"subcategory": ["training", "athletic"],
 			"brand": "Adidas",
 			"color": ["grey"],
 			"stores": [
 				{
-					"store": "Amazon",
+					"store": "Adidas",
 					"prices": [
 						{
 							"date": "2017-10-01T23:35:01",
@@ -372,8 +372,8 @@
 			"short_description": "Black &middot; Urban",
 			"reviews_num": 8,
 			"favorites_num": 4,
-			"category": "Accessories",
-			"subcategory": ["Hats", "Cap"],
+			"category": "accessories",
+			"subcategory": ["hats", "cap"],
 			"brand": "Lion",
 			"color": ["black"],
 			"stores": [

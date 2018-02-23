@@ -59,6 +59,7 @@ var worn_by = require('./routes/worn-by');
 var search = require('./routes/search');
 var login = require('./routes/login');
 var register = require('./routes/register');
+var user = require('./routes/user')
 // Example route
 // var user = require('./routes/user');
 
@@ -69,6 +70,7 @@ app.get('/favorites', favorites.view);
 app.get('/top-deals', top_deals.view);
 app.get('/categories', categories.view);
 app.get('/categories/:category', categories.viewCategory);
+app.get('/categories/:category/:subcategory', categories.viewSubcategory);
 app.get('/fashion-trends', fashion_trends.view);
 app.get('/worn-by', worn_by.view);
 app.get('/search', search.viewResults);
@@ -89,7 +91,7 @@ app.post('/register', passport.authenticate('local-register', {
   res.redirect('/login');
 });
 
-app.get('/auth/facebook', passport.authenticate('facebook', { 
+app.get('/auth/facebook', passport.authenticate('facebook', {
   scope : ['public_profile', 'email']
 }));
 
@@ -100,7 +102,7 @@ app.get('/auth/facebook/callback',
 }));
 
 app.get('/settings', settings.view);
-app.get('/settings/user', settings.viewUserProfile);
+app.get('/user', user.view);
 app.get('/settings/email', settings.viewChangeEmail);
 app.get('/settings/password', settings.viewChangePassword);
 app.post('/addToFavorites', favorites.addToFavorites);

@@ -10,14 +10,17 @@ exports.viewResults = function(req, res){
 
     var search_results = [];
     items.forEach(function(obj) {
-      if (obj.name.toLowerCase().indexOf(search_text) >= 0) {
+      if (obj.name.toLowerCase().indexOf(search_text.toLowerCase()) >= 0 ||
+          obj.category.toLowerCase() == search_text.toLowerCase() ||
+          obj.subcategory.indexOf(search_text.toLowerCase()) >= 0 ||
+          obj.brand.toLowerCase() == search_text.toLowerCase()) {
         search_results.push(obj);
       }
     });
 
     console.log(search_text);
     console.log(search_results);
-    
+
     res.render('search', {'layout' : 'defaultLayout', 'search_text' : search_text, 'results' : search_results});
   }
 }

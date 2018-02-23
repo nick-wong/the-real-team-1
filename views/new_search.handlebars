@@ -11,3 +11,26 @@
 
   </div>
 </div>
+
+<br>
+<div class="container">
+  <h4 class="text-center">Try searching for names, categories, or even brands!</h4>
+  <form>
+    <div class="form-group input-group">
+      <input type="text" class="form-control" id="search-text2" placeholder="Search">
+      <span class="input-group-btn">
+        <button id="new-searcheroni" class="btn btn-default submit-btn">Search</button>
+      </span>
+    </div>
+  </form>
+</div>
+
+<script>
+  $(function() {
+    $("#new-searcheroni").on('click', function(e) {
+      e.preventDefault();
+      //console.log('/search/' + document.getElementById('search-text').value);
+      window.location.href = '/search/' + document.getElementById('search-text2').value;
+    });
+  });
+</script>
