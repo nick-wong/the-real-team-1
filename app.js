@@ -62,21 +62,6 @@ var user = require('./routes/user')
 // Example route
 // var user = require('./routes/user');
 
-<<<<<<< HEAD
-app.get('/', index.view);
-app.get('/item', item.viewItem);
-app.get('/item/:id', item.viewItem)
-app.get('/favorites', favorites.view);
-app.get('/top-deals', top_deals.view);
-app.get('/categories', categories.view);
-app.get('/categories/:category', categories.viewCategory);
-app.get('/categories/:category/:subcategory', categories.viewSubcategory);
-app.get('/fashion-trends', fashion_trends.view);
-app.get('/worn-by', worn_by.view);
-app.get('/search', search.viewResults);
-app.get('/search/:text', search.viewResults);
-=======
->>>>>>> 0a6e41b8e9b4d8d32533fc530b070d68f53287c2
 app.get('/login', login.view);
 app.post('/login', passport.authenticate('local-login', {
   failureRedirect : '/login',

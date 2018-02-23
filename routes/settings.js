@@ -1,11 +1,14 @@
 exports.view = function(req, res){
-  res.render('settings', {'layout' : 'defaultLayout'});
+  var user = req.user;
+  res.render('settings', {'layout' : 'defaultLayout', 'user': user});
 };
 
 exports.viewChangeEmail = function(req, res){
-  res.render('email', {'layout' : 'defaultLayout'});
+  var user = req.user;
+  res.render('email', {'layout' : 'defaultLayout', 'user': user});
 };
 
 exports.viewChangePassword = function(req, res){
-  res.render('password', {'layout' : 'defaultLayout'});
+  var user = req.user;
+  res.render('password', {'layout' : 'defaultLayout', 'user': user});
 };
