@@ -28,11 +28,26 @@ body {
 }
 
 .btn {
+  background-image: none;
+}
+
+.submit-btn {
   width: 100%;
   background: #0094ff;
   border: none;
 }
 
-.green {
+.register-btn {
+  width: 100%;
   background: green;
+  border: none;
+}
+
+.cancel-btn {
+  width: 100%;
+  border: none;
+}
+
+.facebook-color {
+  background: #3b5998;
 }
