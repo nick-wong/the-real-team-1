@@ -103,6 +103,7 @@ app.get('/favorites', favorites.view);
 app.get('/top-deals', top_deals.view);
 app.get('/categories', categories.view);
 app.get('/categories/:category', categories.viewCategory);
+app.get('/categories/:category/:subcategory', categories.viewSubcategory);
 app.get('/fashion-trends', fashion_trends.view);
 app.get('/worn-by', worn_by.view);
 app.get('/search', search.viewResults);
