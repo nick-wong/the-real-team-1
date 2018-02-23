@@ -16,8 +16,19 @@ exports.viewItem = function(req, res){
   if(data.users[0].favorites.indexOf(newItem.id) >= 0) {
     newItem.favorited = true;
   }
-  console.log(newItem);
+  newItem.item_type = {
+    "Tops": false,
+    "Bottoms": false,
+    "Shoes": false,
+    "Accessories": false
+  }
+
+  newItem.stores.forEach(function(obj) {
+    obj['current_price'] = obj.prices[obj.prices.length-1].price;
+  });
+  newItem.item_type[newItem.category] = true;
   newItem['layout'] = 'defaultLayout';
+  console.log(newItem);
   res.render('item', newItem);
 
 };

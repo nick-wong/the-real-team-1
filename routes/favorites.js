@@ -18,10 +18,12 @@ exports.view = function(req, res){
 exports.addToFavorites = function(req, res) {
   if(data.users[0]['favorites'].indexOf(parseInt(req.body.item)) >= 0) {
     data.users[0]['favorites'].splice(data.users[0]['favorites'].indexOf(parseInt(req.body.item)), 1);
+    data.items[parseInt(req.body.item)].favorites_num -= 1;
   }
   else {
     data.users[0]['favorites'].push(parseInt(req.body.item));
+    data.items[parseInt(req.body.item)].favorites_num += 1;
   }
-  console.log(data.users);
-  console.log(data);
+  //console.log(data.users);
+  console.log(data.items[parseInt(req.body.item)]);
 }

@@ -12,7 +12,11 @@
   </div>
 </div>
 <div class="container" id="{{id}}">
-    <div class="breadcrumbs"> <a href="/"> Bottoms </a> > <a href="item"> Jeans </a> </div>
+    <div class="breadcrumbs">
+      <a href="/{{category}}"> {{category}} </a>
+       >
+      <a href="/{{category}}/{{subcategory.[0]}}"> {{subcategory.[0]}} </a>
+    </div>
 
       <div class="container">
       <div class="row">
@@ -47,7 +51,7 @@
             <span>(3.0 Average, 3 Reviews)</span>
           </div>
           <div class="col-xs-6 text-center">
-            <span>(5 Favorites)</span>
+            <span>(</span><span class="fav-num">{{favorites_num}}</span><span> Favorites)</span>
           </div>
         </div>
       </div>
@@ -56,6 +60,25 @@
   </div>
   <div class="container">
       <div class="row">
+        {{#if item_type.Tops}}
+        <div class="col-xs-8">
+          <h4 class="size-text"><a href="#">Size Chart </a></h4>
+        </div>
+        <div class="col-xs-2">
+          <h4 class="size-text">Size:</h4>
+        </div>
+        <div class="col-xs-2 no-padding ">
+            <select class="btn btn-outline-primary select-btn">
+              <option>XS</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+              <option>XXL</option>
+            </select>
+        </div>
+        {{else}}
+        {{#if item_type.Bottoms}}
         <div class="col-xs-6">
           <h4 class="size-text"><a href="#">Size Chart </a></h4>
         </div>
@@ -63,14 +86,71 @@
           <h4 class="size-text">Size:</h4>
         </div>
         <div class="col-xs-2 no-padding">
-          <button type="button" class="btn btn-outline-primary text-center">30W</button>
+            <select class="btn btn-outline-primary select-btn">
+              <option>28W</option>
+              <option>29W</option>
+              <option>30W</option>
+              <option>31W</option>
+              <option>32W</option>
+              <option>34W</option>
+              <option>36W</option>
+            </select>
         </div>
         <div class="col-xs-2 no-padding">
-          <button type="button" class="btn btn-outline-primary">32L</button>
+            <select class="btn btn-outline-primary select-btn">
+              <option>28L</option>
+              <option>29L</option>
+              <option>30L</option>
+              <option>31L</option>
+              <option>32L</option>
+              <option>34L</option>
+              <option>36L</option>
+            </select>
         </div>
+        {{else}}
+        {{#if item_type.Shoes}}
+        <div class="col-xs-8">
+          <h4 class="size-text"><a href="#">Size Chart </a></h4>
+        </div>
+        <div class="col-xs-2">
+          <h4 class="size-text">Size:</h4>
+        </div>
+        <div class="col-xs-2 no-padding">
+            <select class="btn btn-outline-primary select-btn">
+              <option>7</option>
+              <option>7.5</option>
+              <option>8</option>
+              <option>8.5</option>
+              <option>9</option>
+              <option>9.5</option>
+              <option>10</option>
+              <option>10.5</option>
+              <option>11</option>
+              <option>11.5</option>
+              <option>12</option>
+            </select>
+          </div>
+        {{else}}
+        {{#if item_type.Accessories}}
+        <div class="col-xs-6">
+          <h4 class="size-text"><a href="#">Size Chart </a></h4>
+        </div>
+        <div class="col-xs-2">
+          <h4 class="size-text">Size:</h4>
+        </div>
+        <div class="col-xs-2 ">
+            <button class="btn btn-outline-primary">
+              One Size
+            </button>
+          </div>
+        {{/if}}
+        {{/if}}
+        {{/if}}
+        {{/if}}
     </div>
     <hr>
   </div>
+
 </div>
 <div id="item-tabs" class="container">
 <ul class="nav nav-tabs">
@@ -91,48 +171,21 @@
       <div class="tab-content">
         <div class="tab-pane active" id="1">
             <ul class="list-group">
+              {{#each stores}}
               <li class="list-group-item">
                 <div class="row">
                   <div class="col-xs-6">
-                    <a href="#">Store #1</a>
+                    <a href="https://www.{{store}}.com">{{store}}</a>
                   </div>
                   <div class="col-xs-6 price">
-                    <del>$99.99</del> <p class="new-price">$29.99</p><br>
-                    $29.99 + free s/h <br>
+                    <del>${{../old_price}}</del> <p class="new-price">${{current_price}}</p><br>
                   </div>
                 </div>
                 <div class="updated">
-                  Updated 42 minutes ago
+                  Updated {{@index}} days ago
                 </div>
               </li>
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <a href="#">Store #2</a>
-                  </div>
-                  <div class="col-xs-6 price">
-                  <del>$99.99</del> <p class="new-price">$54.98</p> <br>
-                  $49.99 + $4.99 s/h <br>
-                </div>
-              </div>
-                <div class="updated">
-                  Updated 50 minutes ago
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <a href="#">Store #3</a>
-                  </div>
-                  <div class="col-xs-6 price">
-                  <del>$99.99</del> <p class="new-price">$74.99</p> <br>
-                  $74.99 + free s/h <br>
-                </div>
-              </div>
-                <div class="updated">
-                  Updated 53 minutes ago
-                </div>
-              </li>
+              {{/each}}
             </ul>
         </div>
         <div class="tab-pane" id="2">
@@ -151,6 +204,7 @@
             			return moment().subtract(months, 'months').toDate();
             		}
 
+                var lineColors = ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#fff"]
                 var ctx = document.getElementById("myChart");
                 var myChart = new Chart(ctx, {
                     type: 'line',
@@ -160,31 +214,33 @@
                 					newDate(2),
                 					newDate(1),
                 					newDate(0)],
-                        datasets: [{
-                            label: 'Company',
-                            data: [12, 17, 13, 15, 11, 12],
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)'
+                        datasets: [
+                          {{#each stores}}
+                          {
+                            label: '{{store}}',
+                            data: [
+                              {{#each prices}}
+                                {
+                                  x: moment('{{date}}'),
+                                  y: {{price}}
+                                }
+                                {{#unless @last}}
+                                  ,
+                                {{/unless}}
+                              {{/each}}
                             ],
                             borderColor: [
-                                'rgba(255,99,132,1)'
+                                lineColors[{{@index}}]
                             ],
                             borderWidth: 1,
                             fill: 'false',
                             lineTension: 0
-                        }, {
-                            label: 'Company',
-                            data: [16, 14, 20.99, 18, 15],
-                            backgroundColor: [
-                                'rgba(54, 162, 235, 0.2)'
-                            ],
-                            borderColor: [
-                                'rgba(54, 162, 235, 1)'
-                            ],
-                            borderWidth: 1,
-                            fill: 'false',
-                            lineTension: 0
-                        }]
+                          }
+                          {{#unless @last}}
+                            ,
+                          {{/unless}}
+                        {{/each}}
+                      ]
                     },
                     options: {
                       offset: true,
@@ -199,11 +255,11 @@
               						},
                           scaleLabel: {
               							display: true,
-              							labelString: 'Date'
+              							labelString: 'Past 6 Months'
               						},
                           ticks: {
-                            source: 'data',
-                            autoSkip: false
+                            //source: 'show',
+                            autoSkip: true
                           }
                 				}],
                 				yAxes: [{

@@ -294,3 +294,9 @@ However, delay the fade out process for 2.5 seconds */
 .border {
   border: 1px solid red;
 }
+
+.select-btn {
+  height: 34px;
+  padding: 7px 0px 7px 0px;
+  background-color: #DDD;
+}

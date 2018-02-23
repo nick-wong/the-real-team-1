@@ -169,11 +169,15 @@
         $(this).removeClass("glyphicon-heart-empty").addClass("glyphicon-heart");
         favoritesChange = " Added to ";
         $.post('/addToFavorites/', {'item': item_id});
+        var favNum = $(this).closest(".row").siblings().find(".fav-num");
+        favNum.html(parseInt(favNum.text()) + 1);
       }
       else {
         $(this).removeClass("glyphicon-heart").addClass("glyphicon-heart-empty");
         favoritesChange = " Removed from ";
         $.post('/addToFavorites/', {'item': item_id});
+        var favNum = $(this).closest(".row").siblings().find(".fav-num");
+        favNum.html(parseInt(favNum.text()) - 1);
         undo = ' <button type="button" class="btn btn-link no-padding" onclick="undoRemoveFavorites(' + item_id + ');"> Undo</button>';
       }
 
@@ -200,7 +204,7 @@
   window.onscroll = function() {scrollFunction()};
 
   function scrollFunction() {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
           document.getElementById("scroll-top").style.display = "block";
       } else {
           document.getElementById("scroll-top").style.display = "none";

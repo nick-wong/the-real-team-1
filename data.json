@@ -24,10 +24,54 @@
 			"short_description": "Blue &middot; Denim &middot; Slim Fit",
 			"reviews_num": 3,
 			"favorites_num": 8,
-			"category": "bottoms",
-			"subcategory": ["jeans", "denim", "pants"],
+			"category": "Bottoms",
+			"subcategory": ["Jeans", "Denim", "Pants"],
 			"brand": "Levi's",
-			"color": "blue"
+			"colors": ["blue"],
+			"stores": [
+				{
+					"store": "Amazon",
+					"prices": [
+						{
+							"date": "2017-10-01T23:35:01",
+							"price": 42.98
+						},
+						{
+							"date": "2017-10-23T13:00:01",
+							"price": 49.98
+						},
+						{
+							"date": "2017-12-04T09:03:01",
+							"price": 34.98
+						},
+						{
+							"date": "2018-02-20T20:40:01",
+							"price": 29.99
+						}
+					]
+				},
+				{
+					"store": "Asos",
+					"prices": [
+						{
+							"date": "2017-10-13T23:35:01",
+							"price": 59.99
+						},
+						{
+							"date": "2017-11-18T13:00:01",
+							"price": 64.99
+						},
+						{
+							"date": "2018-01-26T09:03:01",
+							"price": 37.98
+						},
+						{
+							"date": "2018-02-11T20:40:01",
+							"price": 47.98
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": 1,
@@ -38,10 +82,54 @@
 			"short_description": "Black &middot; Polyester &middot; Tapered",
 			"reviews_num": 12,
 			"favorites_num": 31,
-			"category": "bottoms",
-			"subcategory": ["active", "pants", "sweatpants"],
+			"category": "Bottoms",
+			"subcategory": ["Track", "Active", "Pants", "Sweatpants"],
 			"brand": "Adidas",
-			"colors": ["black"]
+			"colors": ["black"],
+			"stores": [
+				{
+					"store": "Amazon",
+					"prices": [
+						{
+							"date": "2017-10-01T23:35:01",
+							"price": 44.99
+						},
+						{
+							"date": "2017-10-23T13:00:01",
+							"price": 39.99
+						},
+						{
+							"date": "2017-12-04T09:03:01",
+							"price": 30.99
+						},
+						{
+							"date": "2017-02-20T20:40:01",
+							"price": 34.98
+						}
+					]
+				},
+				{
+					"store": "Asos",
+					"prices": [
+						{
+							"date": "2017-10-13T23:35:01",
+							"price": 49.99
+						},
+						{
+							"date": "2017-11-18T13:00:01",
+							"price": 39.99
+						},
+						{
+							"date": "2017-01-26T09:03:01",
+							"price": 44.98
+						},
+						{
+							"date": "2017-02-11T20:40:01",
+							"price": 37.98
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": 2,
@@ -52,10 +140,54 @@
 			"short_description": "Black &middot; Cotton &middot; Slim Fit",
 			"reviews_num": 6,
 			"favorites_num": 3,
-			"category": "tops",
-			"subcategory": ["jacket", "blazer"],
+			"category": "Tops",
+			"subcategory": ["Jacket", "Blazer"],
 			"brand": "Calvin & Klein",
-			"color": ["black"]
+			"color": ["black"],
+			"stores": [
+				{
+					"store": "Amazon",
+					"prices": [
+						{
+							"date": "2017-10-01T23:35:01",
+							"price": 42.98
+						},
+						{
+							"date": "2017-10-23T13:00:01",
+							"price": 39.98
+						},
+						{
+							"date": "2017-12-04T09:03:01",
+							"price": 34.98
+						},
+						{
+							"date": "2017-02-20T20:40:01",
+							"price": 29.99
+						}
+					]
+				},
+				{
+					"store": "Asos",
+					"prices": [
+						{
+							"date": "2017-10-13T23:35:01",
+							"price": 39.99
+						},
+						{
+							"date": "2017-11-18T13:00:01",
+							"price": 24.99
+						},
+						{
+							"date": "2017-01-26T09:03:01",
+							"price": 44.99
+						},
+						{
+							"date": "2017-02-11T20:40:01",
+							"price": 22.99
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": 3,
@@ -66,10 +198,54 @@
 			"short_description": "Blue &middot; Cotton &middot; Regular",
 			"reviews_num": 22,
 			"favorites_num": 9,
-			"category": "tops",
-			"subcategory": ["t-shirt", "shirt"],
+			"category": "Tops",
+			"subcategory": ["T-shirt", "Shirt"],
 			"brand": "Hanes",
-			"color": ["cobalt"]
+			"color": ["cobalt"],
+			"stores": [
+				{
+					"store": "Amazon",
+					"prices": [
+						{
+							"date": "2017-10-01T23:35:01",
+							"price": 12.99
+						},
+						{
+							"date": "2017-10-23T13:00:01",
+							"price": 4.99
+						},
+						{
+							"date": "2017-12-04T09:03:01",
+							"price": 5.99
+						},
+						{
+							"date": "2017-02-20T20:40:01",
+							"price": 7.99
+						}
+					]
+				},
+				{
+					"store": "Asos",
+					"prices": [
+						{
+							"date": "2017-10-13T23:35:01",
+							"price": 9.99
+						},
+						{
+							"date": "2017-11-18T13:00:01",
+							"price": 10.99
+						},
+						{
+							"date": "2017-01-26T09:03:01",
+							"price": 8.99
+						},
+						{
+							"date": "2017-02-11T20:40:01",
+							"price": 9.99
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": 4,
@@ -80,10 +256,54 @@
 			"short_description": "Black &middot; Running",
 			"reviews_num": 4,
 			"favorites_num": 11,
-			"category": "shoes",
-			"subcategory": ["athletic", "running"],
+			"category": "Shoes",
+			"subcategory": ["Running", "Athletic"],
 			"brand": "Adidas",
-			"color": ["black", "white"]
+			"color": ["black", "white"],
+			"stores": [
+				{
+					"store": "Amazon",
+					"prices": [
+						{
+							"date": "2017-10-01T23:35:01",
+							"price": 79.99
+						},
+						{
+							"date": "2017-10-23T13:00:01",
+							"price": 89.99
+						},
+						{
+							"date": "2017-12-04T09:03:01",
+							"price": 77.99
+						},
+						{
+							"date": "2017-02-20T20:40:01",
+							"price": 59.98
+						}
+					]
+				},
+				{
+					"store": "Asos",
+					"prices": [
+						{
+							"date": "2017-10-13T23:35:01",
+							"price": 69.99
+						},
+						{
+							"date": "2017-11-18T13:00:01",
+							"price": 54.99
+						},
+						{
+							"date": "2017-01-26T09:03:01",
+							"price": 81.99
+						},
+						{
+							"date": "2017-02-11T20:40:01",
+							"price": 67.99
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": 5,
@@ -94,10 +314,112 @@
 			"short_description": "Grey &middot; Training",
 			"reviews_num": 33,
 			"favorites_num": 40,
-			"category": "shoes",
-			"subcategory": ["athletic", "training"],
+			"category": "Shoes",
+			"subcategory": ["Training", "Athletic"],
 			"brand": "Adidas",
-			"color": ["grey"]
+			"color": ["grey"],
+			"stores": [
+				{
+					"store": "Amazon",
+					"prices": [
+						{
+							"date": "2017-10-01T23:35:01",
+							"price": 39.99
+						},
+						{
+							"date": "2017-10-23T13:00:01",
+							"price": 89.99
+						},
+						{
+							"date": "2017-12-04T09:03:01",
+							"price": 74.99
+						},
+						{
+							"date": "2017-02-20T20:40:01",
+							"price": 79.99
+						}
+					]
+				},
+				{
+					"store": "Asos",
+					"prices": [
+						{
+							"date": "2017-10-13T23:35:01",
+							"price": 59.99
+						},
+						{
+							"date": "2017-11-18T13:00:01",
+							"price": 64.99
+						},
+						{
+							"date": "2017-01-26T09:03:01",
+							"price": 78.99
+						},
+						{
+							"date": "2017-02-11T20:40:01",
+							"price": 44.99
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 6,
+			"name": "Black Hat",
+			"imageURL": "black_hat.png",
+			"old_price": 39.99,
+			"new_price": 12.99,
+			"short_description": "Black &middot; Urban",
+			"reviews_num": 8,
+			"favorites_num": 4,
+			"category": "Accessories",
+			"subcategory": ["Hats", "Cap"],
+			"brand": "Lion",
+			"color": ["black"],
+			"stores": [
+				{
+					"store": "Amazon",
+					"prices": [
+						{
+							"date": "2017-10-01T23:35:01",
+							"price": 13.66
+						},
+						{
+							"date": "2017-10-23T13:00:01",
+							"price": 18.49
+						},
+						{
+							"date": "2017-12-04T09:03:01",
+							"price": 32.99
+						},
+						{
+							"date": "2018-02-20T20:40:01",
+							"price": 14.98
+						}
+					]
+				},
+				{
+					"store": "Asos",
+					"prices": [
+						{
+							"date": "2017-10-13T23:35:01",
+							"price": 21.99
+						},
+						{
+							"date": "2017-11-18T13:00:01",
+							"price": 19.99
+						},
+						{
+							"date": "2018-01-26T09:03:01",
+							"price": 10.98
+						},
+						{
+							"date": "2018-02-11T20:40:01",
+							"price": 12.99
+						}
+					]
+				}
+			]
 		}
 	],
 
