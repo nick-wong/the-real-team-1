@@ -16,37 +16,41 @@
 
 <div class="container">
 	<div class="row">
-	    <div class="col-xs-3">
-	    </div>
-	    <div class="col-xs-6" style="text-align: center;">
-			<h4>{{user.name}}</h4>
-		</div>
-		</div>
-		<div class="col-xs-3">
-	    </div>
-	</div>
-  <div class="row">
-    <div class="col-xs-offset-3 col-xs-6">
-      <img id="profile-picture" src="//graph.facebook.com/{{user.facebook.id}}/picture"/>
-    </div>
+   <div class="col-xs-3">
+   </div>
+   <div class="col-xs-6" style="text-align: center;">
+     <h4>{{user.name}}</h4>
+   </div>
+ </div>
+ <div class="col-xs-3">
+ </div>
+</div>
+<div class="row">
+  <div class="col-xs-offset-3 col-xs-6">
+    {{#if user.facebook.id}}
+    <img id="profile-picture" src="//graph.facebook.com/{{user.facebook.id}}/picture"/>
+    {{else}}
+    <img id="profile-picture" src="../img/profile_picture.png"/>
+    {{/if}}
   </div>
+</div>
 
-	<br>
+<br>
 
-	<div class="row">
-	    <div class="col-xs-1">
-	    </div>
-	    <div class="col-xs-10" style="text-align: center;">
-			<h4><span class="glyphicon glyphicon-envelope"></span> &nbsp; {{user.email}}</h4>
+<div class="row">
+ <div class="col-xs-1">
+ </div>
+ <div class="col-xs-10" style="text-align: center;">
+   <h4><span class="glyphicon glyphicon-envelope"></span> &nbsp; {{user.email}}</h4>
 
-			<div class="form-check">
-			   <input type="checkbox" class="form-check-input" id="exampleCheck1">
-			   <label class="form-check-label" for="exampleCheck1">Receive Email Notifications?</label>
-			</div>
-			<button type="submit" class="btn btn-default settings-btn">Save</button>
-		</div>
-		</div>
-		<div class="col-xs-1">
-	    </div>
-	</div>
+   <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Receive Email Notifications?</label>
+  </div>
+  <button type="submit" class="btn btn-default settings-btn">Save</button>
+</div>
+</div>
+<div class="col-xs-1">
+</div>
+</div>
 </div>
