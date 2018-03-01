@@ -101,6 +101,10 @@ hr {
     background-color: #7092BE;
 }
 
+.modal-body .carousel-indicators {
+  margin-bottom: 0px;
+}
+
 /*.carousel-inner .item img {
   width: 70%;
   margin-left: auto;

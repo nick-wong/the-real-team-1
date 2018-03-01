@@ -7,7 +7,7 @@
   src="//code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-  <link rel="shortcut icon" href="../img/shirt.png" type="image/png">
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
   <title>ClothesPros</title>
     <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -95,17 +95,6 @@
 </nav>
 </div>
 
-<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-body">
-      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-      <img src="" class="imagepreview" style="width: 100%;" >
-    </div>
-  </div>
-</div>
-</div>
-
 {{{body}}}
 
 <button onclick="topFunction()" id="scroll-top" title="Go to top"><span class="glyphicon glyphicon-chevron-up"></span></button>
@@ -121,13 +110,6 @@
     if(e.target !== $('.form-control')[0]) {
         $('.navbar-collapse').collapse("hide");
     }
-  });
-
-  $(function() {
-  		$('.item-img').on('click', function() {
-  			$('.imagepreview').attr('src', $(this).find('img').attr('src'));
-  			$('#imagemodal').modal('show');
-  		});
   });
 
   $(function() {
