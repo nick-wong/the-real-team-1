@@ -102,6 +102,7 @@ app.get('/item/:id', item.viewItem)
 app.get('/favorites', favorites.view);
 app.get('/top-deals', top_deals.view);
 app.get('/categories', categories.view);
+app.get('/categories-b', categories.viewB);
 app.get('/categories/:category', categories.viewCategory);
 app.get('/categories/:category/:subcategory', categories.viewSubcategory);
 app.get('/fashion-trends', fashion_trends.view);

@@ -4,6 +4,10 @@ exports.view = function(req, res){
   res.render('categories', {'layout' : 'defaultLayout'});
 };
 
+exports.viewB = function(req, res){
+  res.render('categories-b', {'layout' : 'defaultLayout'});
+};
+
 exports.viewCategory = function(req, res){
   var user = req.user;
   var category = req.params.category.toLowerCase();
