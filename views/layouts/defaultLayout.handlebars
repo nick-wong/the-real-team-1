@@ -214,6 +214,11 @@
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
+
+  $(".category-btn").click(function() {
+    console.log("asdf");
+    ga('send', 'event', 'category', 'click');
+  });
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115376631-1"></script>
