@@ -1,11 +1,11 @@
 var data = require('../data.json');
 
 exports.view = function(req, res){
-  res.render('categories', {'layout' : 'defaultLayout', 'is_category_page': true});
+  res.render('categories', {'layout' : 'defaultLayout', 'is_category_page': true, 'user' : req.user});
 };
 
 exports.viewB = function(req, res){
-  res.render('categories-b', {'layout' : 'defaultLayout', 'is_category_page': true});
+  res.render('categories-b', {'layout' : 'defaultLayout', 'is_category_page': true, 'user' : req.user});
 };
 
 exports.viewCategory = function(req, res){
