@@ -15,6 +15,9 @@ exports.viewCategory = function(req, res){
 
   var category_items = [];
   items.forEach(function(obj) {
+    if(data.users[0].favorites.indexOf(obj.id) >= 0) {
+      obj.favorited = true;
+    }
     if (obj.category.toLowerCase() == category) {
       category_items.push(obj);
       console.log(obj.category);
@@ -35,6 +38,9 @@ exports.viewSubcategory = function(req, res){
 
   var category_items = [];
   items.forEach(function(obj) {
+    if(data.users[0].favorites.indexOf(obj.id) >= 0) {
+      obj.favorited = true;
+    }
     if (obj.subcategory.indexOf(subcategory.toLowerCase()) >= 0) {
       category_items.push(obj);
     }

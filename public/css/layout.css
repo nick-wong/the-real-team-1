@@ -158,7 +158,7 @@ hr {
 }
 
 .item-img img {
-	padding: 1px;
+	/*padding: 1px;*/
 	border: 1px solid #DDDDDD;
 }
 
@@ -303,4 +303,12 @@ However, delay the fade out process for 2.5 seconds */
   height: 34px;
   padding: 7px 0px 7px 0px;
   background-color: #DDD;
+}
+
+.category-img {
+  padding: 0px;
+  border-radius: 0px;
+	width: 100%;
+	outline: 1px solid #DDDDDD;
+	margin-top: 1px;
 }

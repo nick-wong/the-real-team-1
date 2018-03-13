@@ -18,10 +18,10 @@ exports.viewItem = function(req, res){
     newItem.favorited = true;
   }
   newItem.item_type = {
-    "Tops": false,
-    "Bottoms": false,
-    "Shoes": false,
-    "Accessories": false
+    "tops": false,
+    "bottoms": false,
+    "shoes": false,
+    "accessories": false
   }
 
   newItem.stores.forEach(function(obj) {
